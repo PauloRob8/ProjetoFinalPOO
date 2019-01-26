@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Livro;
+import com.example.paulo_000.readerdiary.Negocios.Fonte;
 import com.example.paulo_000.readerdiary.Negocios.GerenciadorLivro;
 import com.example.paulo_000.readerdiary.R;
 
@@ -29,7 +31,7 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
     private Context context;
     private List<Livro> lista;
     private Box<Livro> box;
-    public final int request_code = 1001;
+
 
 
     public LivrosAdapter(Context context, List<Livro> lista, Box<Livro> b) {
@@ -50,10 +52,13 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
     public void onBindViewHolder(LivrosAdapter.LivrosViewHolder holder, final int position) {
         final Livro livro = this.lista.get(position);
         final GerenciadorLivro gerenciadorLivro = new GerenciadorLivro(livro);
+        final Fonte fonteSetter = new Fonte(context);
         holder.textViewTitulo.setText(livro.getTitulo());
         holder.textViewStatus.setText(livro.getStatus());
         holder.textViewAutor.setText(livro.getAutor());
         holder.textViewGenero.setText(livro.getGenero());
+        fonteSetter.setartFonte1(holder.textViewAutor,holder.textViewGenero,holder.textViewStatus,holder.textViewTitulo);
+
 
         try {
             if (!livro.getQtdPg().isEmpty() && !livro.getPgAtual().isEmpty())

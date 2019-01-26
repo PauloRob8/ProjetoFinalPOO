@@ -1,4 +1,4 @@
-#Wed Jan 23 02:17:30 BRST 2019
+#Sat Jan 26 03:25:08 BRST 2019
 base.0=C\:\\Users\\paulo_000\\Documents\\Android Projects\\ReaderDiary4.0\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

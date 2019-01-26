@@ -128,15 +128,18 @@ public class Livro {
         this.setDataInicial(dataInicial);
         this.setPgAtual(pgAtual);
         this.setDataFinal(dataFinal);
+        this.validaPag(numeroDePg,pgAtual);
 
     }
 
-    public void validaData(){
+    public void validaData(String dataInicial,String dataFinal){
 
     }
 
-    public void validaPag(){
-
+    public void validaPag(String qtdPg,String pgAtual){
+        if(Integer.parseInt(pgAtual) > Integer.parseInt(qtdPg) ){
+            this.setPgAtual(qtdPg);
+        }
     }
 
 }
