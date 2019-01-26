@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cap_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/moldura"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cap_image"
+                android:src="@mipmap/ic_comment"
+                android:layout_width="95dp"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/cap_numero"
+                android:text="1"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/cap_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cap_name"
+                android:text="Capítulo"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_toEndOf="@id/cap_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cap_titulo"
+                android:layout_below="@id/cap_name"
+                android:layout_marginTop="15dp"
+                android:maxLength="30"
+                android:text="Titulo"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/cap_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+           <TextView
+                android:id="@+id/cap_coment"
+                android:hint="@string/coment_rios_sobre_o_c_pitulo"
+                android:layout_toEndOf="@id/cap_image"
+                android:textStyle="italic"
+                android:maxLength="250"
+                android:layout_below="@+id/cap_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

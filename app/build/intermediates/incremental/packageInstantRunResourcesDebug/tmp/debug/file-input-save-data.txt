@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Sat Jan 19 23:53:39 BRST 2019
+1.base=C\:\\Users\\paulo_000\\Documents\\Android Projects\\ReaderDiary4.0\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.path=font2.TTF
+0.baseType=DIRECTORY
+2.base=C\:\\Users\\paulo_000\\Documents\\Android Projects\\ReaderDiary4.0\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=DancingScript.ttf
+0.set=ASSET
+0.base=C\:\\Users\\paulo_000\\Documents\\Android Projects\\ReaderDiary4.0\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=Kaushan.ttf

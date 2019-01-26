@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/paper_bg"
+        tools:context="com.example.paulo_000.readerdiary.UI.AddLivroActivity">
+
+        <EditText
+            android:id="@+id/add_titulo"
+            android:background="@drawable/moldura"
+            android:hint="@string/titulo"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:textColorHint="@color/black"
+            android:inputType="text"
+            android:maxLength="50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_autor"
+            android:background="@drawable/moldura"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:hint="@string/autor"
+            android:textColorHint="@color/black"
+            android:layout_below="@id/add_titulo"
+            android:inputType="text"
+            android:maxLength="35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/add_genero"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:background="@drawable/moldura"
+            android:layout_below="@id/add_autor"
+            android:hint="Gênero ->"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="genero"/>
+
+        <EditText
+            android:id="@+id/add_pg"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:background="@drawable/moldura"
+            android:layout_below="@id/add_genero"
+            android:hint="@string/numero_de_p_ginas"
+            android:textColorHint="@color/black"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/add_status"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:background="@drawable/moldura"
+            android:text="@string/selecione_status_do_livro"
+            android:textColor="@color/black"
+            android:layout_below="@id/add_ano"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="status"
+            />
+
+        <EditText
+            android:id="@+id/add_ano"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:background="@drawable/moldura"
+            android:layout_below="@id/add_pg"
+            android:hint="@string/ano_de_publica_o"
+            android:textColorHint="@color/black"
+            android:inputType="date"
+            android:maxLength="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/data_ini_txt"
+            android:text="@string/data_de_inicio"
+            android:textColor="@color/black"
+            android:layout_marginVertical="10dp"
+            android:layout_below="@id/add_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calendarioDataInicial"/>
+
+        <TextView
+            android:id="@+id/data_fim_txt"
+            android:layout_marginVertical="10dp"
+            android:text="@string/data_de_termino"
+            android:textColor="@color/black"
+            android:layout_below="@id/data_ini_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calendarioDataFinal"/>
+
+
+        <TextView
+            android:id="@+id/data_inicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/data_ini_txt"
+            android:layout_alignBottom="@+id/data_ini_txt"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/data_fim_txt"
+            android:text="00/00/0000"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/data_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/data_fim_txt"
+            android:layout_alignBottom="@+id/data_fim_txt"
+            android:layout_alignStart="@+id/data_inicial"
+            android:layout_marginStart="12dp"
+            android:text="00/00/0000"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/pagina_atual"
+            android:visibility="invisible"
+            android:hint="Insira página atual:"
+            android:textColorHint="@color/black"
+            android:inputType="number"
+            android:layout_below="@id/data_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/save_livro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pagina_atual"
+            android:layout_marginTop="23dp"
+            android:layout_marginVertical="20dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="salvarLivro"
+            android:text="@string/salvar_livro" />
+
+        <Button
+            android:text="@string/cancelar"
+            android:layout_below="@id/save_livro"
+            android:layout_marginVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:onClick="AddCancelar"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

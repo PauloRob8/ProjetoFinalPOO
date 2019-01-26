@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper_bg"
+    tools:context="com.example.paulo_000.readerdiary.UI.AddCapituloActivity">
+
+
+
+    <EditText
+        android:id="@+id/add_cap_number"
+        android:hint="Numero do capítulo:"
+        android:textColorHint="@color/black"
+        android:inputType="number"
+        android:maxLength="2"
+        android:background="@drawable/moldura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/add_cap_titulo"
+        android:background="@drawable/moldura"
+        android:hint="@string/titulo"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/add_comentario_titulo"
+        android:background="@drawable/moldura"
+        android:hint="Comentario:"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+    <Button
+        android:text="Salvar"
+        android:onClick="salvarCapitulo"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

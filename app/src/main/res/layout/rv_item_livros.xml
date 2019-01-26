@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE4B5"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/book_image"
+                android:layout_width="120dp"
+                android:layout_height="110dp"
+                android:src="@drawable/book2" />
+
+            <TextView
+                android:id="@+id/l_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/book_image"
+                android:text="@string/titulo"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/add_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l_titulo"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/book_image"
+                android:text="@string/status"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/rv_autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_status"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/book_image"
+                android:text="@string/autor" />
+
+            <TextView
+                android:id="@+id/rv_genero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_autor"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/book_image"
+                android:text="@string/genero" />
+
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_genero"
+                android:layout_marginStart="90dp"
+                android:layout_toEndOf="@id/book_image"
+                android:text="Progresso"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="250dp"
+                android:layout_height="13dp"
+                android:layout_below="@id/progress_text"
+                android:layout_marginStart="130dp"
+                android:indeterminate="false"
+                android:max="10000"
+                android:soundEffectsEnabled="true" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/edit_livro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar"
+                android:layout_marginVertical="10dp"
+                android:layout_toEndOf="@id/book_image"
+                android:src="@mipmap/ic_editbook"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/remove_livro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_toEndOf="@id/edit_livro"
+                android:src="@mipmap/ic_removerbk"
+                app:backgroundTint="#FF0000"
+                app:fabSize="mini" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

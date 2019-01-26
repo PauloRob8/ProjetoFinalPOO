@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/lendo"
+        android:title="Lendo">
+
+    </item>
+
+    <item
+        android:id="@+id/lido"
+        android:title="Lido">
+
+    </item>
+
+    <item
+        android:id="@+id/interessado"
+        android:title="Interessado">
+
+    </item>
+
+</menu>

@@ -1,0 +1,142 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8027927662726741047",
+      "lastPropertyId": "4:130613739176843992",
+      "name": "Usuario",
+      "properties": [
+        {
+          "id": "1:3148677432957566368",
+          "name": "id"
+        },
+        {
+          "id": "2:3056685035194919210",
+          "name": "email"
+        },
+        {
+          "id": "3:2051174953741558612",
+          "name": "senha"
+        },
+        {
+          "id": "4:130613739176843992",
+          "name": "nome"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5028548162492047711",
+      "lastPropertyId": "11:3809020732550795322",
+      "name": "Livro",
+      "properties": [
+        {
+          "id": "1:5461239802173653728",
+          "name": "id"
+        },
+        {
+          "id": "2:7065205006643888351",
+          "name": "titulo"
+        },
+        {
+          "id": "3:2266136032247659544",
+          "name": "autor"
+        },
+        {
+          "id": "4:114888039638429381",
+          "name": "genero"
+        },
+        {
+          "id": "5:3434440711612244651",
+          "name": "ano"
+        },
+        {
+          "id": "6:2758808407297730998",
+          "name": "qtdPg"
+        },
+        {
+          "id": "7:1038990227480636597",
+          "name": "pgAtual"
+        },
+        {
+          "id": "8:1038465083390904433",
+          "name": "status"
+        },
+        {
+          "id": "9:8533269661073379042",
+          "name": "dataInicial"
+        },
+        {
+          "id": "10:6810938032151902719",
+          "name": "dataFinal"
+        },
+        {
+          "id": "11:3809020732550795322",
+          "indexId": "2:7662657813652590186",
+          "name": "donoId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:2566594627892294190",
+      "lastPropertyId": "6:9074846524052674497",
+      "name": "Capitulos",
+      "properties": [
+        {
+          "id": "1:1678270935742993549",
+          "name": "id"
+        },
+        {
+          "id": "2:5962437224288200030",
+          "name": "titulo"
+        },
+        {
+          "id": "3:2355892995514950011",
+          "name": "comentario"
+        },
+        {
+          "id": "5:5871409882906676746",
+          "indexId": "4:6505008433555763402",
+          "name": "livroId"
+        },
+        {
+          "id": "6:9074846524052674497",
+          "name": "capNum"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:2566594627892294190",
+  "lastIndexId": "4:6505008433555763402",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [
+    1021047138446221729
+  ],
+  "retiredIndexUids": [
+    6594454585264472464,
+    2972867783593521967
+  ],
+  "retiredPropertyUids": [
+    1066913415526844582,
+    8304006561988453376,
+    6652104380101318212,
+    6433061221928433559,
+    6768994396974767190,
+    4842707708378042425,
+    5052799941344354667,
+    891489543374133592,
+    4612261518598590212,
+    1008412695193571110,
+    4011910182522332363,
+    6286467196150765272
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

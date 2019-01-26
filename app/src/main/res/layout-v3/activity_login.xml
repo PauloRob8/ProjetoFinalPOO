@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/book_cover"
+    tools:context="com.example.paulo_000.readerdiary.UI.LoginActivity">
+
+    <TextView
+        android:id="@+id/readerDiary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:text="@string/bem_vindo_ao_readerdiary" />
+
+    <EditText
+        android:id="@+id/Lemail"
+        android:background="@drawable/moldura"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        android:maxLength="50"
+        android:hint="@string/email"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="45dp"
+        />
+    <EditText
+        android:id="@+id/Lsenha"
+        android:background="@drawable/moldura"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLength="50"
+        android:layout_gravity="center"
+        android:hint="Senha:"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="25dp"
+        />
+
+    <Button
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="25dp"
+        android:text="@string/logar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="logar"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:text="@string/ainda_n_o_possui_conta_cadastre_se_agora"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:text="@string/cadastre_se"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="moverParaCadastro"/>
+
+</LinearLayout>

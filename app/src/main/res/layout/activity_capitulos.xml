@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/paper_bg"
+        tools:context="com.example.paulo_000.readerdiary.UI.CapitulosActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/info"
+                android:text="Info do livro"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/v_titulo"
+                android:layout_below="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/v_autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_titulo"
+                android:text="@string/autor"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/v_genero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_autor"
+                android:text="@string/genero"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/v_ano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_genero"
+                android:text="@string/ano"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/v_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_ano"
+                android:text="@string/status"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/v1_qtdPg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_status"
+                android:text="@string/numero_de_p_ginas"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/v_qtdPg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_status"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@+id/v1_qtdPg"
+                android:text="pgs"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/v1_data1"
+                android:text="@string/data_de_inicio"
+                android:layout_below="@+id/v1_qtdPg"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/v_data1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_qtdPg"
+                android:layout_marginStart="47dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/v1_data1"
+                android:text="date"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/v1_data2"
+                android:text="@string/data_de_termino"
+                android:layout_below="@+id/v1_data1"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/v_data2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_data1"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="-2dp"
+                android:layout_toEndOf="@+id/v1_data2"
+                android:text="date"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/opniao"
+                android:text="O que achou desse livro?"
+                android:visibility="gone"
+                android:layout_marginStart="100dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:id="@+id/group_button"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_below="@id/opniao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/button1"
+                android:text="Gostei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gostei"/>
+
+            <RadioButton
+                android:id="@+id/button2"
+                android:text="Não gostei"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="nGostei"/>
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/avaliação"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/capitulos"
+                android:layout_marginStart="56dp"
+                android:layout_toEndOf="@+id/group_button" />
+
+            <TextView
+                android:id="@+id/capitulos"
+                android:layout_below="@id/group_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Cápitulos"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center" />
+
+        <RelativeLayout
+            android:layout_below="@id/capitulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_capitulos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="245dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_below="@id/rv_capitulos"
+                android:onClick="addCapitulo"
+                android:src="@drawable/feather"
+                app:backgroundTint="@color/colorPrimary"
+                app:layout_anchor="@id/rv_capitulos" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
