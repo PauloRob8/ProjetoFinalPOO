@@ -2,37 +2,44 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="22"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="hdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1548482311586"
+    timestamp="1548641916792"
     token="5912265345706492197"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="12366" />
+        duration="5308" />
     <task
         name="instant-run-dex"
-        duration="1196" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="965" />
+        duration="118" />
     <task
         name="verifier"
-        duration="1092" />
+        duration="51" />
 
     <artifact
-        location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1548482045805"
+        timestamp="1548640496710"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -56,9 +63,6 @@
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
@@ -69,12 +73,28 @@
             type="SPLIT" />
     </build>
     <build
-        build-mode="HOT_WARM"
-        timestamp="1548482311586"
-        verifier="COMPATIBLE" >
+        build-mode="COLD"
+        ir-eligibility="FIELD_REMOVED"
+        timestamp="1548641456865"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1548641916792"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

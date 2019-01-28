@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -57,7 +56,7 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
         holder.textViewStatus.setText(livro.getStatus());
         holder.textViewAutor.setText(livro.getAutor());
         holder.textViewGenero.setText(livro.getGenero());
-        fonteSetter.setartFonte1(holder.textViewAutor,holder.textViewGenero,holder.textViewStatus,holder.textViewTitulo);
+        fonteSetter.setarFonte(holder.textViewAutor,holder.textViewGenero,holder.textViewStatus,holder.textViewTitulo);
 
 
         try {

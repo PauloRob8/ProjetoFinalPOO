@@ -137,8 +137,10 @@ public class Livro {
     }
 
     public void validaPag(String qtdPg,String pgAtual){
-        if(Integer.parseInt(pgAtual) > Integer.parseInt(qtdPg) ){
-            this.setPgAtual(qtdPg);
+        if(!pgAtual.equals("") & !qtdPg.equals("")) {
+            if (Integer.parseInt(pgAtual) > Integer.parseInt(qtdPg)) {
+                this.setPgAtual(qtdPg);
+            }
         }
     }
 

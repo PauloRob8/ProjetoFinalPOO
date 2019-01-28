@@ -12,10 +12,12 @@ import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Usuario;
 import com.example.paulo_000.readerdiary.Model.Usuario_;
+import com.example.paulo_000.readerdiary.Negocios.Fonte;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
 
 
+import java.lang.reflect.Type;
 import java.util.List;
 
 import io.objectbox.Box;
@@ -27,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     public EditText editSenha;
     public Box<Usuario> usuarioBox;
     public Usuario usuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +43,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-
         appTitle = findViewById(R.id.readerDiary);
-        Typeface font = Typeface.createFromAsset(getAssets(),"font2.TTF");
-        appTitle.setTypeface(font);
         editEmail = findViewById(R.id.Lemail);
         editSenha = findViewById(R.id.Lsenha);
 
-        editEmail.setTypeface(font);
-        editSenha.setTypeface(font);
+        final Fonte fonte = new Fonte(this);
+        fonte.setarFonte(appTitle);
+        fonte.setarFonte(editEmail);
+        fonte.setarFonte(editSenha);
+
     }
 
     public void logar(View view) {

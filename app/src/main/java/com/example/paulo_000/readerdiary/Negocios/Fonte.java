@@ -10,36 +10,42 @@ import android.widget.TextView;
 public class Fonte {
 
     Context context;
-    Typeface font,font1;
+    Typeface font;
 
     public Fonte(Context context){
         this.context = context;
         AssetManager mngr = context.getAssets();
-        this.font = Typeface.createFromAsset(mngr,"DancingScript.ttf");
-        this.font1 = Typeface.createFromAsset(mngr,"font2.TTF");
+        this.font = Typeface.createFromAsset(mngr,"font2.TTF");
     }
 
 
-    public void setarFonte1(EditText texto){
-        texto.setTypeface(font);
+
+    public void setarFonteNoLivro(EditText titulo, EditText autor, TextView genero, EditText ano, TextView status, EditText qtdPg, EditText pgAtual, TextView data1, TextView data2) {
+
+        titulo.setTypeface(font);
+        autor.setTypeface(font);
+        genero.setTypeface(font);
+        ano.setTypeface(font);
+        status.setTypeface(font);
+        qtdPg.setTypeface(font);
+        pgAtual.setTypeface(font);
+        data1.setTypeface(font);
+        data2.setTypeface(font);
     }
 
-    public void setarFonte1(TextView text){
+    public void setarFonte(TextView text1, TextView text2, TextView text3, TextView text4){
+        text1.setTypeface(font);
+        text2.setTypeface(font);
+        text3.setTypeface(font);
+        text4.setTypeface(font);
+    }
+
+    public void setarFonte(TextView text){
         text.setTypeface(font);
     }
 
-    public void setartFonte1(TextView text1,TextView text2,TextView text3,TextView text4){
-        text1.setTypeface(font1);
-        text2.setTypeface(font1);
-        text3.setTypeface(font1);
-        text4.setTypeface(font1);
+    public void setarFonte(EditText text){
+        text.setTypeface(font);
     }
 
-    public void setarFonte2(EditText texto){
-        texto.setTypeface(font1);
-    }
-
-    public void setarFonte2(TextView text){
-        text.setTypeface(font1);
-    }
 }

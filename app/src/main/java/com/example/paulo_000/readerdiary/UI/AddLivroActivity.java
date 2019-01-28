@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Livro;
 import com.example.paulo_000.readerdiary.Model.Usuario;
+import com.example.paulo_000.readerdiary.Negocios.Fonte;
 import com.example.paulo_000.readerdiary.Negocios.GerenciadorLivro;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
@@ -28,7 +29,6 @@ public class AddLivroActivity extends AppCompatActivity {
 
     EditText editTitulo,editAutor, editAno, editQtdpg,editPaginaAtual;
     TextView editStatus, editData,editData2,editGenero;
-
 
     private Livro livro;
 
@@ -73,9 +73,7 @@ public class AddLivroActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-        Typeface font = Typeface.createFromAsset(getAssets(),"font2.TTF");
         editTitulo = findViewById(R.id.add_titulo);
-        editTitulo.setTypeface(font);
         editAutor = findViewById(R.id.add_autor);
         editGenero = findViewById(R.id.add_genero);
         editAno = findViewById(R.id.add_ano);
@@ -84,11 +82,9 @@ public class AddLivroActivity extends AppCompatActivity {
         editData = findViewById(R.id.data_inicial);
         editData2 = findViewById(R.id.data_final);
         editPaginaAtual = findViewById(R.id.pagina_atual);
-        editAutor.setTypeface(font);
-        editGenero.setTypeface(font);
-        editAno.setTypeface(font);
-        editQtdpg.setTypeface(font);
-        editStatus.setTypeface(font);
+
+        final Fonte fonte = new Fonte(this);
+        fonte.setarFonteNoLivro(editTitulo,editAutor,editGenero,editAno,editStatus,editQtdpg,editPaginaAtual,editData,editData2);
 
     }
 
