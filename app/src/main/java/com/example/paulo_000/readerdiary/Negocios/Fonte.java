@@ -33,6 +33,10 @@ public class Fonte {
         data2.setTypeface(font);
     }
 
+    public void setarFonteNoCapitulo(){
+
+    }
+
     public void setarFonte(TextView text1, TextView text2, TextView text3, TextView text4){
         text1.setTypeface(font);
         text2.setTypeface(font);

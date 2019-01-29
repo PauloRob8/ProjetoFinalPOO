@@ -52,4 +52,8 @@ public class GerenciadorLivro {
         return R.drawable.abook;
     }
 
+    public void atualizarBarraProgresso(){
+
+    }
+
 }
