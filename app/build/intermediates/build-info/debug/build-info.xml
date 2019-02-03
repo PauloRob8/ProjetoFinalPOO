@@ -7,25 +7,25 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1548641916792"
+    timestamp="1549169041644"
     token="5912265345706492197"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="5308" />
+        duration="36450" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="118" />
+        duration="606" />
     <task
         name="verifier"
-        duration="51" />
+        duration="333" />
 
     <artifact
-        location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -33,64 +33,61 @@
 
     <build
         build-mode="FULL"
-        timestamp="1548640496710"
+        timestamp="1549165949486"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_REMOVED"
-        timestamp="1548641456865"
+        ir-eligibility="FIELD_ADDED"
+        timestamp="1549167550072"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1548641916792"
+        timestamp="1549169041644"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\build\intermediates\instant-run-apk\debug\app-debug.apk"

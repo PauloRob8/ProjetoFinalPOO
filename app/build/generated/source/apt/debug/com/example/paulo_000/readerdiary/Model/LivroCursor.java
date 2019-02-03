@@ -35,6 +35,7 @@ public final class LivroCursor extends Cursor<Livro> {
     private final static int __ID_gostei = Livro_.gostei.id;
     private final static int __ID_dataInicial = Livro_.dataInicial.id;
     private final static int __ID_dataFinal = Livro_.dataFinal.id;
+    private final static int __ID_notaDeAvaliação = Livro_.notaDeAvaliação.id;
     private final static int __ID_donoId = Livro_.donoId.id;
 
     public LivroCursor(Transaction tx, long cursor, BoxStore boxStore) {
@@ -97,7 +98,7 @@ public final class LivroCursor extends Cursor<Livro> {
                 __ID_donoId, entity.getDono().getTargetId(), __ID_gostei, entity.isGostei() ? 1 : 0,
                 0, 0, 0, 0,
                 0, 0, 0, 0,
-                0, 0, 0, 0);
+                __ID_notaDeAvaliação, entity.getNotaDeAvaliação(), 0, 0);
 
         entity.setId(__assignedId);
 

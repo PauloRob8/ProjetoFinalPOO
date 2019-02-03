@@ -133,49 +133,23 @@
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/opniao"
-                android:text="O que achou desse livro?"
-                android:visibility="gone"
-                android:layout_marginStart="100dp"
+                android:text="Avalie o livro"
+                android:layout_gravity="center"
+                android:visibility="visible"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <RadioGroup
-                android:id="@+id/group_button"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:visibility="gone"
-                android:layout_below="@id/opniao"
+            <RatingBar
+                android:id="@+id/avaliacao"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="1.0"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/button1"
-                android:text="Gostei"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="gostei"/>
-
-            <RadioButton
-                android:id="@+id/button2"
-                android:text="Não gostei"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="nGostei"/>
-
-            </RadioGroup>
-
-            <ImageView
-                android:id="@+id/avaliação"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_above="@+id/capitulos"
-                android:layout_marginStart="56dp"
-                android:layout_toEndOf="@+id/group_button" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/capitulos"
-                android:layout_below="@id/group_button"
+                android:layout_below="@id/avaliacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

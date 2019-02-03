@@ -22,6 +22,15 @@ public class Livro {
     private boolean gostei;
     private String dataInicial;
     private String dataFinal;
+    private float notaDeAvaliação;
+
+    public float getNotaDeAvaliação() {
+        return notaDeAvaliação;
+    }
+
+    public void setNotaDeAvaliação(float notaDeAvaliação) {
+        this.notaDeAvaliação = notaDeAvaliação;
+    }
 
     public String getDataFinal() {
         return dataFinal;

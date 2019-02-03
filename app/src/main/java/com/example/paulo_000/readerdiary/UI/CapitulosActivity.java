@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Capitulos;
 import com.example.paulo_000.readerdiary.Model.Capitulos_;
@@ -29,14 +31,12 @@ import static com.example.paulo_000.readerdiary.R.*;
 
 public class CapitulosActivity extends AppCompatActivity {
 
-    ImageView avaliar;
     TextView capitulo,vTitulo,vGenero,vAno,vAutor,vPaginas,vData1,vData2,vStatus,info,opniao;
-    RadioGroup opniaoButton;
+    RatingBar ratingBar;
 
     private Box<Livro> livroBox;
     private Box<Capitulos> capitulosBox;
     private Livro livro;
-    private RadioButton btn1,btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,9 +88,6 @@ public class CapitulosActivity extends AppCompatActivity {
 
         Typeface font = Typeface.createFromAsset(getAssets(),"font2.TTF");
 
-        btn1 = findViewById(id.button1);
-        btn2 = findViewById(id.button2);
-        avaliar = findViewById(id.avaliação);
         capitulo = findViewById(id.capitulos);
         vTitulo = findViewById(R.id.v_titulo);
         vAno = findViewById(R.id.v_ano);
@@ -102,7 +99,7 @@ public class CapitulosActivity extends AppCompatActivity {
         vStatus = findViewById(id.v_status);
         info = findViewById(R.id.info);
         opniao = findViewById(id.opniao);
-        opniaoButton = findViewById(id.group_button);
+        ratingBar = findViewById(id.avaliacao);
 
         vTitulo.setTypeface(font);
         info.setTypeface(font);
@@ -114,8 +111,6 @@ public class CapitulosActivity extends AppCompatActivity {
         vData1.setTypeface(font);
         vStatus.setTypeface(font);
         vData2.setTypeface(font);
-        btn1.setTypeface(font);
-        btn2.setTypeface(font);
         vStatus.setTypeface(font);
 
     }
@@ -129,30 +124,22 @@ public class CapitulosActivity extends AppCompatActivity {
         vPaginas.setText(livro.getQtdPg());
         vData1.setText(livro.getDataInicial());
         vData2.setText(livro.getDataFinal());
-        if(livro.isGostei()){
-            btn1.setChecked(true);
-            btn2.setChecked(false);
-        }
-        else{
-            btn2.setChecked(true);
-            btn1.setChecked(false);
-        }
 
-        if(livro.getStatus() == "Lido"){
+        if(livro.getStatus().equals("Lido")){
             opniao.setVisibility(View.VISIBLE);
-            opniaoButton.setVisibility(View.VISIBLE);
-
+            ratingBar.setVisibility(View.VISIBLE);
         }
-
-
     }
 
+    public void avaliar(){
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+               livro.setNotaDeAvaliação(rating);
 
-    private Livro obtemLivro() {
-        final SharedPreferences preferences = getSharedPreferences("readerdiary", MODE_PRIVATE);
-        Intent intent = getIntent();
-        final long id = intent.getLongExtra("livroId", -1);
-        return livroBox.get(id);
+            }
+        });
+        Toast.makeText(this,""+livro.getNotaDeAvaliação(),Toast.LENGTH_LONG).show();
     }
 
     public void addCapitulo(View view) {
@@ -163,14 +150,4 @@ public class CapitulosActivity extends AppCompatActivity {
         startActivity(intent1);
     }
 
-    public void gostei(View view) {
-        livro.setGostei(true);
-        this.avaliar.setImageResource(mipmap.ic_gostei);
-
-    }
-
-    public void nGostei(View view) {
-        livro.setGostei(false);
-        this.avaliar.setImageResource(mipmap.ic_ngostei);
-    }
 }

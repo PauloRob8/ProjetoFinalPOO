@@ -47,7 +47,7 @@ public class MyObjectBox {
         entityBuilder.entityDone();
 
         entityBuilder = modelBuilder.entity("Livro");
-        entityBuilder.id(3, 5028548162492047711L).lastPropertyId(12, 3735666019700383425L);
+        entityBuilder.id(3, 5028548162492047711L).lastPropertyId(13, 1961099309683307209L);
         entityBuilder.flags(io.objectbox.model.EntityFlags.USE_NO_ARG_CONSTRUCTOR);
         entityBuilder.property("id", PropertyType.Long).id(1, 5461239802173653728L)
             .flags(PropertyFlags.ID | PropertyFlags.NOT_NULL);
@@ -62,6 +62,8 @@ public class MyObjectBox {
             .flags(PropertyFlags.NOT_NULL);
         entityBuilder.property("dataInicial", PropertyType.String).id(9, 8533269661073379042L);
         entityBuilder.property("dataFinal", PropertyType.String).id(10, 6810938032151902719L);
+        entityBuilder.property("notaDeAvaliação", PropertyType.Float).id(13, 1961099309683307209L)
+            .flags(PropertyFlags.NOT_NULL);
         entityBuilder.property("donoId", "Usuario", "dono", PropertyType.Relation).id(11, 3809020732550795322L)
             .flags(PropertyFlags.NOT_NULL | PropertyFlags.INDEXED | PropertyFlags.VIRTUAL | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(2, 7662657813652590186L);
         entityBuilder.entityDone();

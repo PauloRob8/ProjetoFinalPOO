@@ -46,7 +46,8 @@ public final class Livro_ implements EntityInfo<Livro> {
     public final static Property gostei = new Property(8, 12, boolean.class, "gostei");
     public final static Property dataInicial = new Property(9, 9, String.class, "dataInicial");
     public final static Property dataFinal = new Property(10, 10, String.class, "dataFinal");
-    public final static Property donoId = new Property(11, 11, long.class, "donoId");
+    public final static Property notaDeAvaliação = new Property(11, 13, float.class, "notaDeAvaliação");
+    public final static Property donoId = new Property(12, 11, long.class, "donoId");
 
     public final static Property[] __ALL_PROPERTIES = {
         id,
@@ -60,6 +61,7 @@ public final class Livro_ implements EntityInfo<Livro> {
         gostei,
         dataInicial,
         dataFinal,
+        notaDeAvaliação,
         donoId
     };
 

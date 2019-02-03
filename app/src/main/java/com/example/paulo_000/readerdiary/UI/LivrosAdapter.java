@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +58,11 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
         holder.textViewAutor.setText(livro.getAutor());
         holder.textViewGenero.setText(livro.getGenero());
         fonteSetter.setarFonte(holder.textViewAutor,holder.textViewGenero,holder.textViewStatus,holder.textViewTitulo);
+
+        if(livro.getStatus().equals("Lido")){
+            holder.ratingBar.setVisibility(View.VISIBLE);
+            holder.ratingBar.setRating(livro.getNotaDeAvaliação());
+        }
 
 
         try {
@@ -134,6 +140,7 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
         FloatingActionButton editarLivro,removerLivro;
         CardView cardView;
         ProgressBar progressBar;
+        RatingBar ratingBar;
 
         public LivrosViewHolder(View itemView) {
             super(itemView);
@@ -146,6 +153,7 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
             cardView = itemView.findViewById(R.id.card);
             progressBar = itemView.findViewById(R.id.progress_bar);
             imagemLivro = itemView.findViewById(R.id.book_image);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
         }
 
         }

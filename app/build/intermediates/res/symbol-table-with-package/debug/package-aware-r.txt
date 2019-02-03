@@ -873,15 +873,13 @@ id all
 id always
 id async
 id auto
-id avaliação
+id avaliacao
 id basic
 id beginning
 id blocking
 id book_image
 id book_image2
 id bottom
-id button1
-id button2
 id buttonPanel
 id cancel_action
 id cap_card
@@ -940,7 +938,6 @@ id fill_vertical
 id fixed
 id forever
 id ghost_view
-id group_button
 id header
 id home
 id homeAsUp
@@ -995,6 +992,7 @@ id progress_circular
 id progress_horizontal
 id progress_text
 id radio
+id ratingBar
 id readerDiary
 id remove_livro
 id remover_cap
