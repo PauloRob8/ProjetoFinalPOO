@@ -1,6 +1,7 @@
 package com.example.paulo_000.readerdiary.Negocios;
 
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.paulo_000.readerdiary.Model.Livro;
@@ -52,8 +53,24 @@ public class GerenciadorLivro {
         return R.drawable.abook;
     }
 
-    public void atualizarBarraProgresso(){
+    public void atualizarBarraProgresso(ProgressBar progressBar){
 
+        if (!livro.getQtdPg().trim().isEmpty() & !livro.getPgAtual().trim().isEmpty()) {
+            progressBar.setMax(Integer.parseInt(livro.getQtdPg()));
+            progressBar.setProgress(Integer.parseInt(livro.getPgAtual()));
+        }
+        if(livro.getQtdPg().equals("")){
+            livro.setQtdPg("0");
+        }
+
+        if(livro.getPgAtual().equals("")){
+            livro.setPgAtual("0");
+        }
+
+        if (progressBar.getProgress() == progressBar.getMax()) {
+            progressBar.setProgress(100);
+            livro.setStatus("Lido");
+        }
     }
 
 }

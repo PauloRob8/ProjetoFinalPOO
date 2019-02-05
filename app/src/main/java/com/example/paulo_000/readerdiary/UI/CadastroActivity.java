@@ -9,12 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Usuario;
-import com.example.paulo_000.readerdiary.Model.Usuario_;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
 
-
-import java.util.List;
 
 import io.objectbox.Box;
 
@@ -39,21 +36,15 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     public void cadastrar(View view) {
-        String email = cadastroEmail.getText().toString();
-        String senha = cadastroSenha.getText().toString();
-        String nome = nomeDoUsuario.getText().toString();
-
 
         Usuario usuario = new Usuario();
-        usuario.setEmail(email);
-        usuario.setSenha(senha);
-        usuario.setNome(nome);
-        List<Usuario> result = usuarioBox.query()
-                .equal(Usuario_.email, email)
-                .build()
-                .find();
+
+        String email = cadastroEmail.getText().toString();
+        String senha = cadastroSenha.getText().toString();
+        usuario.salvaInfo(nomeDoUsuario,email,senha);
+
         if (!email.trim().isEmpty() && !senha.trim().isEmpty())
-            if (result.size() == 0) {
+            if (usuario.cadastraUsuario(usuarioBox) == 0) {
                 usuarioBox.put(usuario);
                 Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
                 carregaUsuario(usuario);

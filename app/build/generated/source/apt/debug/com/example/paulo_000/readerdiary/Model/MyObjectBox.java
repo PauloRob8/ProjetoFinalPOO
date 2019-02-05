@@ -58,8 +58,6 @@ public class MyObjectBox {
         entityBuilder.property("qtdPg", PropertyType.String).id(6, 2758808407297730998L);
         entityBuilder.property("pgAtual", PropertyType.String).id(7, 1038990227480636597L);
         entityBuilder.property("status", PropertyType.String).id(8, 1038465083390904433L);
-        entityBuilder.property("gostei", PropertyType.Bool).id(12, 3735666019700383425L)
-            .flags(PropertyFlags.NOT_NULL);
         entityBuilder.property("dataInicial", PropertyType.String).id(9, 8533269661073379042L);
         entityBuilder.property("dataFinal", PropertyType.String).id(10, 6810938032151902719L);
         entityBuilder.property("notaDeAvaliação", PropertyType.Float).id(13, 1961099309683307209L)

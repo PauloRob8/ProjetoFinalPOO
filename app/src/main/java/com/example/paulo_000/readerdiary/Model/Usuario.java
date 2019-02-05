@@ -1,5 +1,10 @@
 package com.example.paulo_000.readerdiary.Model;
 
+import android.widget.EditText;
+
+import java.util.List;
+
+import io.objectbox.Box;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 
@@ -46,7 +51,24 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public void logar(){
+    public void salvaInfo(EditText editNome, String editEmail,String editSenha) {
+        String nome = editNome.getText().toString();
+        this.setEmail(editEmail);
+        this.setSenha(editSenha);
+        this.setNome(nome);
 
+    }
+
+    public int cadastraUsuario(Box<Usuario> usuarioBox){
+        List<Usuario> result = usuarioBox.query().equal(Usuario_.email,this.email).build().find();
+        return result.size();
+    }
+
+    public List<Usuario> logaUsuario(Box<Usuario> usuarioBox,String email,String senha){
+        List<Usuario> result = usuarioBox.query()
+                .equal(Usuario_.email,email)
+                .equal(Usuario_.senha,senha)
+                .build().find();
+        return result;
     }
 }

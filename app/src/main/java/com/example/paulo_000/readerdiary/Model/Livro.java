@@ -19,7 +19,6 @@ public class Livro {
     private String qtdPg;
     private String pgAtual;
     private String status;
-    private boolean gostei;
     private String dataInicial;
     private String dataFinal;
     private float notaDeAvaliação;
@@ -118,13 +117,6 @@ public class Livro {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public boolean isGostei() {
-        return gostei;
-    }
-    public void setGostei(boolean gostei) {
-        this.gostei = gostei;
     }
 
     public void salvaLivro(String nome,String autor,String genero,String ano,String status,String numeroDePg,String dataInicial,String pgAtual,String dataFinal){

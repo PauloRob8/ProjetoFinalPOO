@@ -1,16 +1,12 @@
 package com.example.paulo_000.readerdiary.UI;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -135,12 +131,13 @@ public class CapitulosActivity extends AppCompatActivity {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-               livro.setNotaDeAvaliação(rating);
+                livro.setNotaDeAvaliação(rating);
 
             }
         });
         Toast.makeText(this,""+livro.getNotaDeAvaliação(),Toast.LENGTH_LONG).show();
     }
+
 
     public void addCapitulo(View view) {
         Intent intent = getIntent();

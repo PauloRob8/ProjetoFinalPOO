@@ -64,22 +64,7 @@ public class LivrosAdapter extends RecyclerView.Adapter<LivrosAdapter.LivrosView
             holder.ratingBar.setRating(livro.getNotaDeAvaliação());
         }
 
-
-        try {
-            if (!livro.getQtdPg().isEmpty() && !livro.getPgAtual().isEmpty())
-                holder.progressBar.setProgress(Integer.parseInt(livro.getPgAtual()));
-                holder.progressBar.setMax(Integer.parseInt(livro.getQtdPg()));
-        }catch (IllegalArgumentException e){
-            Toast.makeText(context,"Você esqueceu de inserir as páginas!",Toast.LENGTH_SHORT).show();
-        }
-
-        try {
-            if (holder.progressBar.getProgress() == holder.progressBar.getMax())
-                holder.progressBar.setProgress(100);
-                livro.setStatus("Lido");
-        }catch (IllegalArgumentException e){
-            Toast.makeText(context,"Você esqueceu de inserir as páginas!",Toast.LENGTH_SHORT).show();
-        }
+        gerenciadorLivro.atualizarBarraProgresso(holder.progressBar);
 
         holder.imagemLivro.setImageResource(gerenciadorLivro.setLivroIcon());
 

@@ -135,7 +135,7 @@
                 android:id="@+id/opniao"
                 android:text="Avalie o livro"
                 android:layout_gravity="center"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -144,6 +144,8 @@
                 android:layout_gravity="center"
                 android:numStars="5"
                 android:stepSize="1.0"
+                android:onClick="avaliar"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

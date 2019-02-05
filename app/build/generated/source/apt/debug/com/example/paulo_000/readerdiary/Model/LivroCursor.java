@@ -32,7 +32,6 @@ public final class LivroCursor extends Cursor<Livro> {
     private final static int __ID_qtdPg = Livro_.qtdPg.id;
     private final static int __ID_pgAtual = Livro_.pgAtual.id;
     private final static int __ID_status = Livro_.status.id;
-    private final static int __ID_gostei = Livro_.gostei.id;
     private final static int __ID_dataInicial = Livro_.dataInicial.id;
     private final static int __ID_dataFinal = Livro_.dataFinal.id;
     private final static int __ID_notaDeAvaliação = Livro_.notaDeAvaliação.id;
@@ -83,19 +82,19 @@ public final class LivroCursor extends Cursor<Livro> {
         String status = entity.getStatus();
         int __id7 = status != null ? __ID_status : 0;
         String dataInicial = entity.getDataInicial();
-        int __id9 = dataInicial != null ? __ID_dataInicial : 0;
+        int __id8 = dataInicial != null ? __ID_dataInicial : 0;
 
         collect400000(cursor, 0, 0,
                 __id5, qtdPg, __id6, pgAtual,
-                __id7, status, __id9, dataInicial);
+                __id7, status, __id8, dataInicial);
 
         String dataFinal = entity.getDataFinal();
-        int __id10 = dataFinal != null ? __ID_dataFinal : 0;
+        int __id9 = dataFinal != null ? __ID_dataFinal : 0;
 
         long __assignedId = collect313311(cursor, entity.getId(), PUT_FLAG_COMPLETE,
-                __id10, dataFinal, 0, null,
+                __id9, dataFinal, 0, null,
                 0, null, 0, null,
-                __ID_donoId, entity.getDono().getTargetId(), __ID_gostei, entity.isGostei() ? 1 : 0,
+                __ID_donoId, entity.getDono().getTargetId(), 0, 0,
                 0, 0, 0, 0,
                 0, 0, 0, 0,
                 __ID_notaDeAvaliação, entity.getNotaDeAvaliação(), 0, 0);
