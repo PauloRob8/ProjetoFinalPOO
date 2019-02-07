@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Capitulos;
 import com.example.paulo_000.readerdiary.Model.Capitulos_;
@@ -52,6 +51,8 @@ public class CapitulosActivity extends AppCompatActivity {
         livro = livroBox.get(livroId);
 
         carregaLivro(livro);
+
+        ratingBar.setRating(livro.getNotaDeAvaliação());
 
     }
 
@@ -108,6 +109,7 @@ public class CapitulosActivity extends AppCompatActivity {
         vStatus.setTypeface(font);
         vData2.setTypeface(font);
         vStatus.setTypeface(font);
+        opniao.setTypeface(font);
 
     }
 
@@ -127,16 +129,6 @@ public class CapitulosActivity extends AppCompatActivity {
         }
     }
 
-    public void avaliar(){
-        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                livro.setNotaDeAvaliação(rating);
-
-            }
-        });
-        Toast.makeText(this,""+livro.getNotaDeAvaliação(),Toast.LENGTH_LONG).show();
-    }
 
 
     public void addCapitulo(View view) {

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ import io.objectbox.Box;
 public class AddLivroActivity extends AppCompatActivity {
 
     EditText editTitulo,editAutor, editAno, editQtdpg,editPaginaAtual;
-    TextView editStatus, editData,editData2,editGenero;
+    TextView editStatus, editData,editData2,editGenero,avaliar,dataButton1,dataButton2;
 
     private Livro livro;
 
@@ -81,10 +82,15 @@ public class AddLivroActivity extends AppCompatActivity {
         editData = findViewById(R.id.data_inicial);
         editData2 = findViewById(R.id.data_final);
         editPaginaAtual = findViewById(R.id.pagina_atual);
+        avaliar = findViewById(R.id.avaliar);
+        dataButton1 = findViewById(R.id.data_ini_txt);
+        dataButton2 = findViewById(R.id.data_fim_txt);
 
         final Fonte fonte = new Fonte(this);
         fonte.setarFonteNoLivro(editTitulo,editAutor,editGenero,editAno,editStatus,editQtdpg,editPaginaAtual,editData,editData2);
-
+        fonte.setarFonte(avaliar);
+        fonte.setarFonte(dataButton1);
+        fonte.setarFonte(dataButton2);
     }
 
     public void salvarLivro(View view) {
@@ -119,12 +125,17 @@ public class AddLivroActivity extends AppCompatActivity {
             if (menuItem.getItemId() == R.id.lido) {
                 editData.setVisibility(View.VISIBLE);
                 editData2.setVisibility(View.VISIBLE);
+                dataButton1.setVisibility(View.VISIBLE);
+                dataButton2.setVisibility(View.VISIBLE);
                 editPaginaAtual.setVisibility(View.INVISIBLE);
+                avaliar.setVisibility(View.VISIBLE);
                 editStatus.setText("Lido");
                 editStatus.setTextColor(getResources().getColor(R.color.green));
 
             }if (menuItem.getItemId() == R.id.lendo) {
                 editStatus.setText("Lendo");
+                dataButton1.setVisibility(View.VISIBLE);
+                dataButton2.setVisibility(View.INVISIBLE);
                 editData.setVisibility(View.VISIBLE);
                 editData2.setVisibility(View.INVISIBLE);
                 editPaginaAtual.setVisibility(View.VISIBLE);
@@ -185,7 +196,7 @@ public class AddLivroActivity extends AppCompatActivity {
     public boolean genero(View view) {
         PopupMenu popup = new PopupMenu(this, view);
         popup.getMenuInflater().inflate(R.menu.generos,popup.getMenu());
-        popup.setOnMenuItemClickListener((menuItem -> {
+        popup.setOnMenuItemClickListener(((MenuItem menuItem) -> {
             if (menuItem.getItemId() == R.id.terror) {
                 editGenero.setText("Terror");
             }
@@ -217,6 +228,38 @@ public class AddLivroActivity extends AppCompatActivity {
             return false;
         }));
         popup.show();
+        return true;
+    }
+
+    public boolean nota(View view) {
+        PopupMenu popupMenu = new PopupMenu(this,view);
+        popupMenu.getMenuInflater().inflate(R.menu.notas, popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(((MenuItem menuItem)-> {
+
+            if (menuItem.getItemId() == R.id.nota1) {
+                livro.setNotaDeAvaliação(1.0f);
+            }
+
+            if (menuItem.getItemId() == R.id.nota2) {
+                livro.setNotaDeAvaliação(2.0f);
+            }
+
+            if (menuItem.getItemId() == R.id.nota3) {
+                livro.setNotaDeAvaliação(3.0f);
+            }
+
+            if (menuItem.getItemId() == R.id.nota4) {
+                livro.setNotaDeAvaliação(4.0f);
+            }
+
+            if (menuItem.getItemId() == R.id.nota5) {
+                livro.setNotaDeAvaliação(5.0f);
+            }
+
+
+            return false;
+        }));
+        popupMenu.show();
         return true;
     }
 }

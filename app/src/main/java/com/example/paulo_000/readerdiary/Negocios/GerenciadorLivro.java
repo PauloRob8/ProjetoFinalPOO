@@ -67,8 +67,8 @@ public class GerenciadorLivro {
             livro.setPgAtual("0");
         }
 
-        if (progressBar.getProgress() == progressBar.getMax()) {
-            progressBar.setProgress(100);
+        if (progressBar.getProgress() == progressBar.getMax()){
+            progressBar.setProgress(progressBar.getMax());
             livro.setStatus("Lido");
         }
     }

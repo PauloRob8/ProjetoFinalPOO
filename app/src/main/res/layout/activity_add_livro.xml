@@ -94,6 +94,7 @@
             android:text="@string/data_de_inicio"
             android:textColor="@color/black"
             android:layout_marginVertical="10dp"
+            android:background="@drawable/moldura"
             android:layout_below="@id/add_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,6 +105,7 @@
             android:layout_marginVertical="10dp"
             android:text="@string/data_de_termino"
             android:textColor="@color/black"
+            android:background="@drawable/moldura"
             android:layout_below="@id/data_ini_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,12 +144,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/avaliar"
+            android:hint="@string/avaliar"
+            android:background="@drawable/moldura"
+            android:layout_below="@id/pagina_atual"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:onClick="nota"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/save_livro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/pagina_atual"
+            android:layout_below="@+id/avaliar"
             android:layout_marginTop="23dp"
             android:layout_marginVertical="20dp"
             android:backgroundTint="@color/colorPrimaryDark"
@@ -155,13 +167,15 @@
             android:text="@string/salvar_livro" />
 
         <Button
-            android:text="@string/cancelar"
-            android:layout_below="@id/save_livro"
-            android:layout_marginVertical="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/save_livro"
+            android:layout_alignParentStart="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginTop="-40dp"
             android:backgroundTint="#FF0000"
-            android:onClick="AddCancelar"/>
+            android:onClick="AddCancelar"
+            android:text="@string/cancelar" />
 
 
 

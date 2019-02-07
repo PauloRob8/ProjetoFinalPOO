@@ -64,7 +64,8 @@ public class AddCapituloActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        this.finish();
+        
+        startActivity(new Intent(this,CapitulosActivity.class));
     }
 
     public Livro obtemLivro() {

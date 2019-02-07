@@ -874,6 +874,7 @@ id always
 id async
 id auto
 id avaliacao
+id avaliar
 id basic
 id beginning
 id blocking
@@ -973,6 +974,11 @@ id navigation_header_container
 id never
 id none
 id normal
+id nota1
+id nota2
+id nota3
+id nota4
+id nota5
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1169,6 +1175,7 @@ layout support_simple_spinner_dropdown_item
 menu capitulos_options
 menu generos
 menu navigation_menu
+menu notas
 menu status
 mipmap ic_alert
 mipmap ic_comment
