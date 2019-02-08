@@ -23,50 +23,54 @@ Versão mínima do SDK: 22;
 * Usuário
 
 	id;
-	
 	nome;
-	
 	senha;
-	
 	email;
 	
 * Livro
 
 	id;
-	
 	titulo;
-	
 	autor;
-	
 	status;
-	
-	genero;]
-	
+	genero;
 	ano;
-	
 	pagina atual;
-	
 	quantidade total de paginas;
-	
 	data de inicio de leitura;
-	
 	data de termino de leitura;
-	
 	nota de avaliação;
 	
 * Capítulos
 
 	id;
-	
 	numero do capitulo;
-	
 	titulo;
 	
 * Comentário
 
 	descrição;
-	
 	data e hora;
-
-
 	
+A persitência dos dados será realizada através do banco de dados orientado a objetos e NoSql [ObjectBox](https://objectbox.io/), na aplicação serão criadas Caixas (instâncias do ObjectBox) para armazenar os dados ex:
+
+	```
+	public Box<Usuario> usuarioBox;
+	usuarioBox = ((App) getApplication()).getBoxStore().boxFor(Usuario.class);
+	```
+
+Acima foi criado uma instância da box específica para usuários, ou seja, uma caixa de usuários que será usada para armazenar os dados dos mesmos assim criando o esquema multiusário.
+
+**Relacionamentos**
+- O usuário faz login/cadastro na aplicação, dentro da aplicação pode-se ter um ou mais usuários.
+- O usuário adiciona livros, o mesmo pode ter um ou mais livros.
+- Um livro está vinculado a um único usuário, o usuário pode alterar o estado do livro de interessado a lendo e lido.
+- O livro pode ser avaliado,removido e editado pelo usuário assim como também podem ser adicionado comentários aos mesmos.
+- Um livro pode adicionar um ou mais capítulos, e um capítulo pertence a um único livro.
+
+**Diagrama**
+	
+![diagrama de classe readerdiary 1](https://user-images.githubusercontent.com/33494009/52454071-502c8e80-2b31-11e9-9253-678509dc9f99.jpeg)
+
+
+## StoryBoard
