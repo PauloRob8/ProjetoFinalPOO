@@ -70,7 +70,9 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 
 **Diagrama**
 	
-![diagrama de classe readerdiary 1](https://user-images.githubusercontent.com/33494009/52454071-502c8e80-2b31-11e9-9253-678509dc9f99.jpeg)
+
+![diagrama de classe readerdiary 2](https://user-images.githubusercontent.com/33494009/52458260-8ffd7100-2b45-11e9-974a-a9a2cf6d9e74.jpeg)
+
 
 
 ## StoryBoard
