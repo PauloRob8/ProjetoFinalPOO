@@ -1,4 +1,0 @@
-#Thu Feb 07 00:08:47 BRST 2019
-base.0=C\:\\Users\\paulo_000\\Documents\\Android Projects\\ReaderDiary4.0\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
-path.0=classes.dex
-renamed.0=classes.dex
