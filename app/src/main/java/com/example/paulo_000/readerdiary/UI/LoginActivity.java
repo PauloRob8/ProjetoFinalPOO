@@ -10,13 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Usuario;
-import com.example.paulo_000.readerdiary.Model.Usuario_;
-import com.example.paulo_000.readerdiary.Negocios.Fonte;
+import com.example.paulo_000.readerdiary.Services.Fonte;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
 
-
-import java.util.List;
 
 import io.objectbox.Box;
 
@@ -26,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     public EditText editEmail;
     public EditText editSenha;
     public Box<Usuario> usuarioBox;
-    public Usuario usuario = new Usuario();
+    public Usuario usuario;
 
 
     @Override

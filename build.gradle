@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.objectboxVersion = '1.4.1'
+    ext.objectboxVersion = '2.3.1'
     repositories {
         google()
         jcenter()

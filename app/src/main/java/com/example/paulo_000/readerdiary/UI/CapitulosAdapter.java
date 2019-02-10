@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.example.paulo_000.readerdiary.Model.Capitulos;
+import com.example.paulo_000.readerdiary.Model.Capitulo;
 import com.example.paulo_000.readerdiary.R;
 
 import java.util.List;
@@ -22,10 +22,10 @@ import io.objectbox.Box;
 public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.CapitulosViewHolder>{
 
     private Context context;
-    private List<Capitulos> capitulos;
-    private Box<Capitulos> box;
+    private List<Capitulo> capitulos;
+    private Box<Capitulo> box;
 
-    public CapitulosAdapter(Context context, List<Capitulos> capitulos,Box<Capitulos> box) {
+    public CapitulosAdapter(Context context, List<Capitulo> capitulos, Box<Capitulo> box) {
         this.box = box;
         this.context = context;
         this.capitulos = capitulos;
@@ -41,9 +41,9 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.Capi
 
     @Override
     public void onBindViewHolder(CapitulosAdapter.CapitulosViewHolder holder, int position) {
-        final Capitulos capitulo = this.capitulos.get(position);
+        final Capitulo capitulo = this.capitulos.get(position);
         holder.capTitulo.setText(capitulo.getTitulo());
-        holder.capComentario.setText(capitulo.getComentario());
+        holder.capComentario.setText(capitulo.getDescricao());
         holder.capNum.setText(""+capitulo.getCapNum());
 
         holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {

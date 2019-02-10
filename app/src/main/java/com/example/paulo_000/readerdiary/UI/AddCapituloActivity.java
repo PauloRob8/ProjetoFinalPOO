@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.paulo_000.readerdiary.Model.Capitulos;
+import com.example.paulo_000.readerdiary.Model.Capitulo;
 import com.example.paulo_000.readerdiary.Model.Livro;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
@@ -21,11 +21,11 @@ public class AddCapituloActivity extends AppCompatActivity {
     EditText editTitulo, editComentario,editNum;
 
     private Livro livro;
-    private Capitulos capitulo;
+    private Capitulo capitulo;
 
 
     private Box<Livro> livroBox;
-    private Box<Capitulos> capitulosBox;
+    private Box<Capitulo> capitulosBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class AddCapituloActivity extends AppCompatActivity {
 
         setupViews();
         livroBox = ((App) getApplication()).getBoxStore().boxFor(Livro.class);
-        capitulosBox = ((App) getApplication()).getBoxStore().boxFor(Capitulos.class);
+        capitulosBox = ((App) getApplication()).getBoxStore().boxFor(Capitulo.class);
 
         Intent intent = getIntent();
         long capituloId = intent.getLongExtra("capituloId", -1);
@@ -42,7 +42,7 @@ public class AddCapituloActivity extends AppCompatActivity {
         livro = obtemLivro();
 
         if (capituloId == -1) {
-            capitulo = new Capitulos();
+            capitulo = new Capitulo();
         } else {
             capitulo = capitulosBox.get(capituloId);
             carregaCapitulo(capitulo);
@@ -77,28 +77,28 @@ public class AddCapituloActivity extends AppCompatActivity {
     }
 
 
-    public void carregaCapitulo(Capitulos capitulos){
+    public void carregaCapitulo(Capitulo capitulos){
 
         editNum.setText(capitulos.getTitulo());
         editTitulo.setText(capitulos.getTitulo());
-        editComentario.setText(capitulos.getComentario());
+        editComentario.setText(capitulos.getDescricao());
 
     }
 
     public void salvarCapitulo(View view) {
 
-        String titulo = editTitulo.getText().toString();
-        String comentario = editComentario.getText().toString();
-        int numero = Integer.parseInt(editNum.getText().toString());
+       // String titulo = editTitulo.getText().toString();
+        //String comentario = editComentario.getText().toString();
+        //int numero = Integer.parseInt(editNum.getText().toString());
 
-        capitulo.getLivro().setTarget(livro);
+       // capitulo.getLivro().setTarget(livro);
 
-        capitulo.salvaCapitulo(titulo,comentario,numero);
+        //capitulo.salvaCapitulo(titulo,comentario,numero);
 
-        capitulosBox.put(capitulo);
+        //capitulosBox.put(capitulo);
 
-        Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show();
-        finish();
+        //Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show();
+        //finish();
 
     }
 

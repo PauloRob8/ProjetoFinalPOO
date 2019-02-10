@@ -1,5 +1,8 @@
 package com.example.paulo_000.readerdiary.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.relation.ToOne;
@@ -16,12 +19,23 @@ public class Livro {
     private String autor;
     private String genero;
     private String ano;
+
     private String qtdPg;
     private String pgAtual;
     private String status;
     private String dataInicial;
     private String dataFinal;
+    private List<Comentario> comentarios = new ArrayList<Comentario>();
+    private List<Capitulo> capitulos = new ArrayList<Capitulo>();
     private float notaDeAvaliação;
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
 
     public float getNotaDeAvaliação() {
         return notaDeAvaliação;
@@ -119,7 +133,29 @@ public class Livro {
         this.id = id;
     }
 
-    public void salvaLivro(String nome,String autor,String genero,String ano,String status,String numeroDePg,String dataInicial,String pgAtual,String dataFinal){
+    public Livro(){
+
+    }
+
+    public Livro(String titulo,String autor,String genero,String ano,String status,String numeroDePg){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.ano = ano;
+        this.status = status;
+        this.qtdPg =numeroDePg;
+
+    }
+
+    public List<Capitulo> getCapitulos() {
+        return capitulos;
+    }
+
+    public void setCapitulos(List<Capitulo> capitulos) {
+        this.capitulos = capitulos;
+    }
+
+    public void salvaLivro(String nome, String autor, String genero, String ano, String status, String numeroDePg, String dataInicial, String pgAtual, String dataFinal){
         this.setTitulo(nome);
         this.setAno(ano);
         this.setGenero(genero);
@@ -133,9 +169,28 @@ public class Livro {
 
     }
 
-    public void validaData(String dataInicial,String dataFinal){
 
-    }
+   public void addCapitulo(Capitulo capitulo){
+        this.capitulos.add(capitulo);
+   }
+
+   public void addComentario(Comentario comentario){
+        this.comentarios.add(comentario);
+   }
+
+   public void removerComentario(Comentario comentario){
+        this.comentarios.remove(comentario);
+   }
+
+   public void removerCapitulo(Capitulo capitulo){
+        this.capitulos.remove(capitulo);
+   }
+
+   public void lerLivro(String paginaDaLeitura){
+        this.pgAtual = paginaDaLeitura;
+        if (this.pgAtual.equals(this.getQtdPg()))
+            this.setStatus("Lido");
+   }
 
     public void validaPag(String qtdPg,String pgAtual){
         if(!pgAtual.equals("") & !qtdPg.equals("")) {

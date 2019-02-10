@@ -19,7 +19,8 @@ public class MyObjectBox {
 
     public static BoxStoreBuilder builder() {
         BoxStoreBuilder builder = new BoxStoreBuilder(getModel());
-        builder.entity(Capitulos_.__INSTANCE);
+        builder.entity(Capitulo_.__INSTANCE);
+        builder.entity(Comentario_.__INSTANCE);
         builder.entity(Livro_.__INSTANCE);
         builder.entity(Usuario_.__INSTANCE);
         return builder;
@@ -27,23 +28,36 @@ public class MyObjectBox {
 
     private static byte[] getModel() {
         ModelBuilder modelBuilder = new ModelBuilder();
-        modelBuilder.lastEntityId(4, 2566594627892294190L);
-        modelBuilder.lastIndexId(4, 6505008433555763402L);
-        modelBuilder.lastRelationId(0, 0L);
+        modelBuilder.lastEntityId(6, 2010935336677621588L);
+        modelBuilder.lastIndexId(5, 3533949268481199532L);
+        modelBuilder.lastRelationId(3, 7588642949291179894L);
 
         EntityBuilder entityBuilder;
 
-        entityBuilder = modelBuilder.entity("Capitulos");
-        entityBuilder.id(4, 2566594627892294190L).lastPropertyId(6, 9074846524052674497L);
+        entityBuilder = modelBuilder.entity("Capitulo");
+        entityBuilder.id(5, 6015835108166209202L).lastPropertyId(7, 1961414162586964276L);
         entityBuilder.flags(io.objectbox.model.EntityFlags.USE_NO_ARG_CONSTRUCTOR);
-        entityBuilder.property("id", PropertyType.Long).id(1, 1678270935742993549L)
+        entityBuilder.property("id", PropertyType.Long).id(1, 6318987061348755224L)
             .flags(PropertyFlags.ID | PropertyFlags.NOT_NULL);
-        entityBuilder.property("titulo", PropertyType.String).id(2, 5962437224288200030L);
-        entityBuilder.property("capNum", PropertyType.Int).id(6, 9074846524052674497L)
+        entityBuilder.property("titulo", PropertyType.String).id(2, 5847075702348655865L);
+        entityBuilder.property("capNum", PropertyType.Int).id(3, 8066917598039338108L)
             .flags(PropertyFlags.NOT_NULL);
-        entityBuilder.property("comentario", PropertyType.String).id(3, 2355892995514950011L);
-        entityBuilder.property("livroId", "Livro", "livro", PropertyType.Relation).id(5, 5871409882906676746L)
-            .flags(PropertyFlags.NOT_NULL | PropertyFlags.INDEXED | PropertyFlags.VIRTUAL | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(4, 6505008433555763402L);
+        entityBuilder.property("descricao", PropertyType.String).id(4, 3568360826284822928L);
+        entityBuilder.property("favorito", PropertyType.Bool).id(6, 4896779522814663939L)
+            .flags(PropertyFlags.NOT_NULL);
+        entityBuilder.property("marcado", PropertyType.Bool).id(7, 1961414162586964276L)
+            .flags(PropertyFlags.NOT_NULL);
+        entityBuilder.property("livroId", "Livro", "livro", PropertyType.Relation).id(5, 991785612102248241L)
+            .flags(PropertyFlags.NOT_NULL | PropertyFlags.VIRTUAL | PropertyFlags.INDEXED | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(5, 3533949268481199532L);
+        entityBuilder.entityDone();
+
+        entityBuilder = modelBuilder.entity("Comentario");
+        entityBuilder.id(6, 2010935336677621588L).lastPropertyId(3, 881068690981421969L);
+        entityBuilder.flags(io.objectbox.model.EntityFlags.USE_NO_ARG_CONSTRUCTOR);
+        entityBuilder.property("id", PropertyType.Long).id(3, 881068690981421969L)
+            .flags(PropertyFlags.ID | PropertyFlags.NOT_NULL);
+        entityBuilder.property("descricao", PropertyType.String).id(1, 1505225779506646748L);
+        entityBuilder.property("dataHora", PropertyType.String).id(2, 456653537596414775L);
         entityBuilder.entityDone();
 
         entityBuilder = modelBuilder.entity("Livro");
@@ -63,17 +77,25 @@ public class MyObjectBox {
         entityBuilder.property("notaDeAvaliação", PropertyType.Float).id(13, 1961099309683307209L)
             .flags(PropertyFlags.NOT_NULL);
         entityBuilder.property("donoId", "Usuario", "dono", PropertyType.Relation).id(11, 3809020732550795322L)
-            .flags(PropertyFlags.NOT_NULL | PropertyFlags.INDEXED | PropertyFlags.VIRTUAL | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(2, 7662657813652590186L);
+            .flags(PropertyFlags.NOT_NULL | PropertyFlags.VIRTUAL | PropertyFlags.INDEXED | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(2, 7662657813652590186L);
+
+        entityBuilder.relation("comentarios", 1, 7162257758094962566L, 6, 2010935336677621588L);
+
+        entityBuilder.relation("capitulos", 2, 5347952363181811534L, 5, 6015835108166209202L);
         entityBuilder.entityDone();
 
         entityBuilder = modelBuilder.entity("Usuario");
-        entityBuilder.id(1, 8027927662726741047L).lastPropertyId(4, 130613739176843992L);
+        entityBuilder.id(1, 8027927662726741047L).lastPropertyId(5, 2185795398643759479L);
         entityBuilder.flags(io.objectbox.model.EntityFlags.USE_NO_ARG_CONSTRUCTOR);
         entityBuilder.property("id", PropertyType.Long).id(1, 3148677432957566368L)
             .flags(PropertyFlags.ID | PropertyFlags.NOT_NULL);
         entityBuilder.property("nome", PropertyType.String).id(4, 130613739176843992L);
         entityBuilder.property("email", PropertyType.String).id(2, 3056685035194919210L);
         entityBuilder.property("senha", PropertyType.String).id(3, 2051174953741558612L);
+        entityBuilder.property("cadastrado", PropertyType.Bool).id(5, 2185795398643759479L)
+            .flags(PropertyFlags.NOT_NULL);
+
+        entityBuilder.relation("livros", 3, 7588642949291179894L, 3, 5028548162492047711L);
         entityBuilder.entityDone();
 
         return modelBuilder.build();

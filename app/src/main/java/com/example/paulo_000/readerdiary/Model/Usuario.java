@@ -2,6 +2,7 @@ package com.example.paulo_000.readerdiary.Model;
 
 import android.widget.EditText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import io.objectbox.Box;
@@ -18,6 +19,24 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+    private List<Livro> livros = new ArrayList<Livro>();
+    private boolean cadastrado;
+
+    public boolean isCadastrado() {
+        return cadastrado;
+    }
+
+    public void setCadastrado(boolean cadastrado) {
+        this.cadastrado = cadastrado;
+    }
+
+    public List<Livro> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
 
     public String getNome() {
         return nome;
@@ -51,17 +70,32 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public void salvaInfo(EditText editNome, String editEmail,String editSenha) {
-        String nome = editNome.getText().toString();
-        this.setEmail(editEmail);
-        this.setSenha(editSenha);
-        this.setNome(nome);
+
+    public Usuario(String nome,String email,String senha){
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+    }
+
+    public void addLivro(Livro livro){
+        this.livros.add(livro);
 
     }
+
+    public void avaliarLivro(Livro livro,float nota){
+        livro.setNotaDeAvaliação(nota);
+    }
+
+    public void removerLivro(Livro livro){
+        this.livros.remove(livro);
+    }
+
 
     public int cadastraUsuario(Box<Usuario> usuarioBox){
         List<Usuario> result = usuarioBox.query().equal(Usuario_.email,this.email).build().find();
         return result.size();
+
+
     }
 
     public List<Usuario> logaUsuario(Box<Usuario> usuarioBox,String email,String senha){
@@ -70,5 +104,6 @@ public class Usuario {
                 .equal(Usuario_.senha,senha)
                 .build().find();
         return result;
+
     }
 }

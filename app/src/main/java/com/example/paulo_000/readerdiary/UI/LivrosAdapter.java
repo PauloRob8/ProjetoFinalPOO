@@ -14,11 +14,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Livro;
-import com.example.paulo_000.readerdiary.Negocios.Fonte;
-import com.example.paulo_000.readerdiary.Negocios.GerenciadorLivro;
+import com.example.paulo_000.readerdiary.Services.Fonte;
+import com.example.paulo_000.readerdiary.Services.GerenciadorLivro;
 import com.example.paulo_000.readerdiary.R;
 
 import java.util.List;

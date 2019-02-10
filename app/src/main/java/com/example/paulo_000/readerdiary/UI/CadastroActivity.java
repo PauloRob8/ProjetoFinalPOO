@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.paulo_000.readerdiary.Model.Usuario;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
+import com.example.paulo_000.readerdiary.Services.GerenciadorUsuario;
 
 
 import io.objectbox.Box;
@@ -37,23 +38,25 @@ public class CadastroActivity extends AppCompatActivity {
 
     public void cadastrar(View view) {
 
-        Usuario usuario = new Usuario();
 
+        String nome = nomeDoUsuario.getText().toString();
         String email = cadastroEmail.getText().toString();
         String senha = cadastroSenha.getText().toString();
-        usuario.salvaInfo(nomeDoUsuario,email,senha);
+        Usuario usuario = new Usuario(nome,email,senha);
 
-        if (!email.trim().isEmpty() && !senha.trim().isEmpty())
-            if (usuario.cadastraUsuario(usuarioBox) == 0) {
-                usuarioBox.put(usuario);
-                Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                carregaUsuario(usuario);
-            } else {
-                cadastroSenha.getText().clear();
-                Toast.makeText(this, "Email já cadastrado.", Toast.LENGTH_LONG).show();
-            }
+        GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario(usuario);
+
+        if (gerenciadorUsuario.cadastrarUsuario(usuario,email,senha,usuarioBox)== 1) {
+            Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+            carregaUsuario(usuario);
+        }
+        else if(gerenciadorUsuario.cadastrarUsuario(usuario,email,senha,usuarioBox) == -1) {
+            cadastroSenha.getText().clear();
+            Toast.makeText(this, "Email já cadastrado.", Toast.LENGTH_LONG).show();
+        }
+
         else
-            Toast.makeText(this,"Email ou senha não preenchido",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Email ou senha não preenchido cadastrado.", Toast.LENGTH_LONG).show();
 
     }
     private void carregaUsuario(Usuario usuario) {

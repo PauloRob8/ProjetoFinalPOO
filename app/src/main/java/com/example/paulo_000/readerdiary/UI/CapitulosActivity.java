@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.example.paulo_000.readerdiary.Model.Capitulos;
-import com.example.paulo_000.readerdiary.Model.Capitulos_;
+import com.example.paulo_000.readerdiary.Model.Capitulo;
+import com.example.paulo_000.readerdiary.Model.Capitulo_;
 import com.example.paulo_000.readerdiary.Model.Livro;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
@@ -30,7 +30,7 @@ public class CapitulosActivity extends AppCompatActivity {
     RatingBar ratingBar;
 
     private Box<Livro> livroBox;
-    private Box<Capitulos> capitulosBox;
+    private Box<Capitulo> capitulosBox;
     private Livro livro;
 
     @Override
@@ -41,7 +41,7 @@ public class CapitulosActivity extends AppCompatActivity {
         setupViews();
 
         BoxStore store = ((App)getApplication()).getBoxStore();
-        capitulosBox = store.boxFor(Capitulos.class);
+        capitulosBox = store.boxFor(Capitulo.class);
 
         livroBox = ((App) getApplication()).getBoxStore().boxFor(Livro.class);
 
@@ -59,17 +59,18 @@ public class CapitulosActivity extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
-        QueryBuilder<Capitulos> builder = capitulosBox.query();
-        builder.equal(Capitulos_.livroId,livro.getId());
+        QueryBuilder<Capitulo> builder = capitulosBox.query();
+        builder.equal(Capitulo_.livroId,livro.getId());
 
-        List<Capitulos> capitulosDoLivro = builder.build().find();
 
-        loadData(capitulosDoLivro);
+        List<Capitulo> capituloDoLivro = builder.build().find();
+
+        loadData(capituloDoLivro);
 
     }
 
-    private void loadData(List<Capitulos> data){
-        List<Capitulos> capitulos = data;
+    private void loadData(List<Capitulo> data){
+        List<Capitulo> capitulos = data;
 
         CapitulosAdapter adapter = new CapitulosAdapter(this, capitulos,capitulosBox);
 
