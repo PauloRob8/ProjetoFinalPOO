@@ -3,10 +3,12 @@ package com.example.paulo_000.readerdiary.UI;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.paulo_000.readerdiary.Model.Capitulo;
@@ -19,6 +21,7 @@ import io.objectbox.Box;
 public class AddCapituloActivity extends AppCompatActivity {
 
     EditText editTitulo, editComentario,editNum;
+
 
     private Livro livro;
     private Capitulo capitulo;
@@ -87,19 +90,26 @@ public class AddCapituloActivity extends AppCompatActivity {
 
     public void salvarCapitulo(View view) {
 
-       // String titulo = editTitulo.getText().toString();
-        //String comentario = editComentario.getText().toString();
-        //int numero = Integer.parseInt(editNum.getText().toString());
+       String titulo = editTitulo.getText().toString();
+       String comentario = editComentario.getText().toString();
+       int numero = Integer.parseInt(editNum.getText().toString());
 
-       // capitulo.getLivro().setTarget(livro);
+       capitulo.getLivro().setTarget(livro);
 
-        //capitulo.salvaCapitulo(titulo,comentario,numero);
+       livro.editarCapitulo(capitulo,numero,titulo,comentario);
 
-        //capitulosBox.put(capitulo);
+       capitulosBox.put(capitulo);
 
-        //Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show();
-        //finish();
+       Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show();
+       finish();
 
     }
 
+    public void marcarCapitulo(View view) {
+        capitulo.marcarCapitulo();
+    }
+
+    public void favoritarCapitulo(View view) {
+        capitulo.favoritarCap();
+    }
 }

@@ -77,26 +77,81 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public void addLivro(Livro livro){
+    public Usuario(){
+
+    }
+
+    //Para caso o livro seja apenas classificado como "Desejo Ler"
+    public void editarLivro(Livro livro,String titulo,String autor,String genero,String ano,String status,String numeroDePg) {
+        livro.setTitulo(titulo);
+        livro.setAno(ano);
+        livro.setGenero(genero);
+        livro.setAutor(autor);
+        livro.setStatus(status);
+        livro.setQtdPg(numeroDePg);
         this.livros.add(livro);
 
     }
+    //Caso o livro esteja classificado como lendo
+    public void editarLivro(Livro livro,String titulo,String autor,String genero,String ano,String status,String numeroDePg,String dataInicial,String pgAtual) {
+        livro.setTitulo(titulo);
+        livro.setAno(ano);
+        livro.setGenero(genero);
+        livro.setAutor(autor);
+        livro.setStatus(status);
+        livro.setQtdPg(numeroDePg);
+        livro.setPgAtual(pgAtual);
+        livro.setDataInicial(dataInicial);
+        this.livros.add(livro);
+
+    }
+
+    //Caso o livro esteja classificado como lido
+    public void editarLivro(Livro livro,String titulo,String autor,String genero,String ano,String status,String numeroDePg,String paginaAtual,String dataInicial,String datafinal) {
+        livro.setTitulo(titulo);
+        livro.setAno(ano);
+        livro.setGenero(genero);
+        livro.setAutor(autor);
+        livro.setStatus(status);
+        livro.setQtdPg(numeroDePg);
+        livro.setPgAtual(paginaAtual);
+        livro.setDataInicial(dataInicial);
+        livro.setDataFinal(datafinal);
+        this.livros.add(livro);
+
+    }
+
+
+    public void inicarLeitura(Livro livro,String dataDeInicio,String paginaAtual){
+        livro.setStatus("Lendo");
+        livro.setDataInicial(dataDeInicio);
+        livro.setPgAtual(paginaAtual);
+    }
+
+    public void terminarLeitura(Livro livro,String dataInicial,String dataFinal){
+        livro.setStatus("Lido");
+        livro.setDataInicial(dataInicial);
+        livro.setDataFinal(dataFinal);
+    }
+
+    public void addLivro(Livro livro){
+        this.livros.add(livro);
+    }
+
+    public void addLivro(String titulo,String autor,String genero,String ano,String status,String numeroDePg){
+        this.livros.add(new Livro(titulo,autor,genero,ano,status,numeroDePg));
+
+    }
+
 
     public void avaliarLivro(Livro livro,float nota){
         livro.setNotaDeAvaliação(nota);
     }
 
-    public void removerLivro(Livro livro){
-        this.livros.remove(livro);
-    }
 
+   // public int logaUsuario(List<Usuario> usuarios){
+     //   for(int i = 0; i < usuarios.size(); i++){
 
-    public int cadastraUsuario(Box<Usuario> usuarioBox){
-        List<Usuario> result = usuarioBox.query().equal(Usuario_.email,this.email).build().find();
-        return result.size();
-
-
-    }
 
     public List<Usuario> logaUsuario(Box<Usuario> usuarioBox,String email,String senha){
         List<Usuario> result = usuarioBox.query()

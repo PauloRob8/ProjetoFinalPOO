@@ -174,17 +174,21 @@ public class Livro {
         this.capitulos.add(capitulo);
    }
 
+   public void addCapitulo(int numCap,String titulo,String descr){
+        this.capitulos.add(new Capitulo(numCap,titulo,descr));
+   }
+
+   public void editarCapitulo(Capitulo capitulo,int numCap,String titulo,String descr){
+        capitulo.setCapNum(numCap);
+        capitulo.setTitulo(titulo);
+        capitulo.setDescricao(descr);
+
+   }
+
    public void addComentario(Comentario comentario){
         this.comentarios.add(comentario);
    }
 
-   public void removerComentario(Comentario comentario){
-        this.comentarios.remove(comentario);
-   }
-
-   public void removerCapitulo(Capitulo capitulo){
-        this.capitulos.remove(capitulo);
-   }
 
    public void lerLivro(String paginaDaLeitura){
         this.pgAtual = paginaDaLeitura;

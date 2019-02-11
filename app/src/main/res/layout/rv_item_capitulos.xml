@@ -35,6 +35,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <ImageView
+                android:id="@+id/marcado"
+                android:layout_toEndOf="@id/cap_numero"
+                android:src="@mipmap/ic_marcador"
+                android:layout_marginStart="80dp"
+                android:visibility="invisible"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+
+            <ImageView
+                android:id="@+id/favorito"
+                android:layout_toEndOf="@id/marcado"
+                android:src="@mipmap/ic_favorito"
+                android:layout_marginStart="20dp"
+                android:visibility="invisible"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+
             <TextView
                 android:id="@+id/cap_name"
                 android:text="Capítulo"

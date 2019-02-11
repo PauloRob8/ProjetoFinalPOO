@@ -11,6 +11,7 @@
         android:id="@+id/cd_nome"
         android:hint="@string/digite_seu_nome"
         android:textColorHint="@color/black"
+        android:background="@drawable/moldura"
         android:inputType="text"
         android:maxLength="50"
         android:textStyle="italic"
@@ -23,6 +24,7 @@
         android:hint="@string/digite_seu_email"
         android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
+        android:background="@drawable/moldura"
         android:maxLength="50"
         android:textStyle="italic"
         android:layout_width="match_parent"
@@ -32,6 +34,7 @@
     <EditText
         android:id="@+id/cd_senha"
         android:hint="@string/digite_sua_senha"
+        android:background="@drawable/moldura"
         android:textColorHint="@color/black"
         android:textStyle="italic"
         android:inputType="textPassword"

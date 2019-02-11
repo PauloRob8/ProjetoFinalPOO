@@ -81,11 +81,16 @@ public class Capitulo {
 
     }
 
-    public void favoritarCap(){
-        this.favorito = true;
+    public boolean favoritarCap(){
+
+        this.favorito = !this.favorito;
+
+        return this.favorito;
     }
 
-    public void marcarCapitulo(){
-        this.marcado = true;
+    public boolean marcarCapitulo(){
+        this.marcado = !this.marcado;
+
+        return this.marcado;
     }
 }

@@ -37,6 +37,24 @@
         android:layout_height="70dp" />
 
     <Button
+        android:layout_marginTop="20dp"
+        android:text="Favoritar Capitulo"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:onClick="favoritarCapitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Marcar Capitulo"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:onClick="marcarCapitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:text="Salvar"
         android:onClick="salvarCapitulo"
         android:backgroundTint="@color/colorPrimary"

@@ -13,7 +13,10 @@ import com.example.paulo_000.readerdiary.Model.Usuario;
 import com.example.paulo_000.readerdiary.Services.Fonte;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
+import com.example.paulo_000.readerdiary.Services.GerenciadorUsuario;
 
+
+import java.util.List;
 
 import io.objectbox.Box;
 
@@ -23,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     public EditText editEmail;
     public EditText editSenha;
     public Box<Usuario> usuarioBox;
-    public Usuario usuario;
+    public Usuario usuario = new Usuario();
 
 
     @Override
@@ -53,14 +56,20 @@ public class LoginActivity extends AppCompatActivity {
         String email = editEmail.getText().toString();
         String senha = editSenha.getText().toString();
 
-        if (!email.trim().isEmpty() && !senha.trim().isEmpty())
-            if (usuario.logaUsuario(usuarioBox,email,senha).size() > 0) {
-                Toast.makeText(this,"Bem Vindo ao ReaderDiary",Toast.LENGTH_LONG ).show();
-                carregaUsuario(usuario.logaUsuario(usuarioBox,email,senha).get(0));
-            } else {
-                editSenha.getText().clear();
-                Toast.makeText(this, "Email ou senha incorreto(s),Digite novamente", Toast.LENGTH_LONG).show();
-            }
+        GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario();
+
+        List<Usuario> usuarios = usuarioBox.getAll();
+
+        Toast.makeText(this,"" + usuarios.size(),Toast.LENGTH_LONG).show();
+
+        if (gerenciadorUsuario.logarUsuario(usuarios,email,senha) == 1) {
+            Toast.makeText(this, "Bem Vindo ao ReaderDiary", Toast.LENGTH_LONG).show();
+            carregaUsuario(gerenciadorUsuario.obtemUsuarioCadastrado(usuarios,email,senha));
+        }
+        else if (gerenciadorUsuario.logarUsuario(usuarios,email,senha) == -1) {
+            editSenha.getText().clear();
+            Toast.makeText(this, "Email ou senha incorreto(s),Digite novamente", Toast.LENGTH_LONG).show();
+        }
         else
             Toast.makeText(this,"Email ou senha não preenchido",Toast.LENGTH_LONG).show();
     }

@@ -14,12 +14,16 @@ import com.example.paulo_000.readerdiary.R;
 import com.example.paulo_000.readerdiary.Services.GerenciadorUsuario;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.objectbox.Box;
 
 public class CadastroActivity extends AppCompatActivity {
 
     private EditText cadastroEmail,cadastroSenha,nomeDoUsuario;
     private Box<Usuario> usuarioBox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +48,17 @@ public class CadastroActivity extends AppCompatActivity {
         String senha = cadastroSenha.getText().toString();
         Usuario usuario = new Usuario(nome,email,senha);
 
+        List<Usuario> usuarioList = usuarioBox.getAll();
+
         GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario(usuario);
 
-        if (gerenciadorUsuario.cadastrarUsuario(usuario,email,senha,usuarioBox)== 1) {
+
+        if (gerenciadorUsuario.cadastrarUsuario(usuarioList) == 1) {
+            usuarioBox.put(usuario);
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
             carregaUsuario(usuario);
         }
-        else if(gerenciadorUsuario.cadastrarUsuario(usuario,email,senha,usuarioBox) == -1) {
+        else if(gerenciadorUsuario.cadastrarUsuario(usuarioList) == -1) {
             cadastroSenha.getText().clear();
             Toast.makeText(this, "Email já cadastrado.", Toast.LENGTH_LONG).show();
         }

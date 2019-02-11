@@ -932,6 +932,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fantasia
+id favorito
 id ficcao
 id fill
 id fill_horizontal
@@ -963,6 +964,7 @@ id listMode
 id list_item
 id list_view
 id logout
+id marcado
 id masked
 id media_actions
 id message
@@ -1180,6 +1182,7 @@ menu status
 mipmap ic_alert
 mipmap ic_comment
 mipmap ic_editbook
+mipmap ic_favorito
 mipmap ic_gostei
 mipmap ic_inbook
 mipmap ic_indeciso
@@ -1187,6 +1190,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap ic_libook
 mipmap ic_logout
+mipmap ic_marcador
 mipmap ic_ngostei
 mipmap ic_pause
 mipmap ic_perfil

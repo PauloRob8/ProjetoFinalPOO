@@ -107,7 +107,7 @@ public class AddLivroActivity extends AppCompatActivity {
 
         livro.getDono().setTarget(usuario);
 
-        livro.salvaLivro(titulo,autor,genero,ano,status,numeroDePg,dataInicial,pgAtual,dataFinal);
+        usuario.editarLivro(livro,titulo,autor,genero,ano,status,numeroDePg,pgAtual,dataInicial,dataFinal);
 
         livrosBox.put(livro);
 
@@ -237,23 +237,23 @@ public class AddLivroActivity extends AppCompatActivity {
         popupMenu.setOnMenuItemClickListener(((MenuItem menuItem)-> {
 
             if (menuItem.getItemId() == R.id.nota1) {
-                livro.setNotaDeAvaliação(1.0f);
+                usuario.avaliarLivro(livro,1.0f);
             }
 
             if (menuItem.getItemId() == R.id.nota2) {
-                livro.setNotaDeAvaliação(2.0f);
+                usuario.avaliarLivro(livro,2.0f);
             }
 
             if (menuItem.getItemId() == R.id.nota3) {
-                livro.setNotaDeAvaliação(3.0f);
+                usuario.avaliarLivro(livro,3.0f);
             }
 
             if (menuItem.getItemId() == R.id.nota4) {
-                livro.setNotaDeAvaliação(4.0f);
+                usuario.avaliarLivro(livro,4.0f);
             }
 
             if (menuItem.getItemId() == R.id.nota5) {
-                livro.setNotaDeAvaliação(5.0f);
+                usuario.avaliarLivro(livro,5.0f);
             }
 
 

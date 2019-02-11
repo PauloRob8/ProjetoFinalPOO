@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
@@ -45,6 +46,17 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.Capi
         holder.capTitulo.setText(capitulo.getTitulo());
         holder.capComentario.setText(capitulo.getDescricao());
         holder.capNum.setText(""+capitulo.getCapNum());
+
+        if(capitulo.favoritarCap())
+            holder.favorito.setVisibility(View.VISIBLE);
+        else
+            holder.favorito.setVisibility(View.INVISIBLE);
+
+        if(capitulo.marcarCapitulo())
+            holder.marcado.setVisibility(View.VISIBLE);
+        else
+            holder.marcado.setVisibility(View.INVISIBLE);
+
 
         holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -89,6 +101,7 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.Capi
 
        private TextView capTitulo,capComentario,capNum;
        private CardView cardView;
+       private ImageView favorito,marcado;
 
 
         public CapitulosViewHolder(View itemView) {
@@ -98,6 +111,8 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.Capi
             capNum = itemView.findViewById(R.id.cap_numero);
             capTitulo = itemView.findViewById(R.id.cap_titulo);
             capComentario = itemView.findViewById(R.id.cap_coment);
+            favorito = itemView.findViewById(R.id.favorito);
+            marcado = itemView.findViewById(R.id.marcado);
 
         }
 
