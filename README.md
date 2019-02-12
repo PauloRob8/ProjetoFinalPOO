@@ -8,7 +8,7 @@ O Reader Diary é um aplicativo multiusuário possuindo um sistema de cadastro e
 
 O aplicativo permite o usuário adicionar seus livros,separando em status: Interessado,Lendo e por fim Lido,tendo assim um acompanhamento do estado das leituras.Para cada livro adicionado em estado de lendo é possível checar o seu progresso à medida que for atualizado a página atual da leitura.E para cada livro lido é possível avaliar e fazer comentários sobre o mesmo.
 
-Para cada livro adicionado é possível inserir capítulos e comentários nos mesmos,fazendo breves resumos e anotações.Podendo também avaliar o livro caso tenha gostado ou não.
+Para cada livro adicionado é possível inserir capítulos e comentários fazendo breves resumos e anotações.Podendo também avaliar o livro e marcar os capítulos indicando algo importante neles assim como favorita-los.
 	
 
 ### Instalação & Requisitos Mínimos->
@@ -67,6 +67,7 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 - Um livro está vinculado a um único usuário, o usuário pode alterar o estado do livro de interessado a lendo e lido.
 - O livro pode ser avaliado,removido e editado pelo usuário assim como também podem ser adicionado comentários aos mesmos.
 - Um livro pode adicionar um ou mais capítulos, e um capítulo pertence a um único livro.
+- Capítulos podem ser marcados e favoritados.
 
 **Diagrama**
 	
@@ -77,6 +78,6 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 
 ## StoryBoard
 
-![screenshot_2019-01-19-01-24-20](https://user-images.githubusercontent.com/33494009/52457566-9f7abb00-2b41-11e9-9d0d-5bab36eac344.png)
-![screenshot_2019-01-19-01-24-27](https://user-images.githubusercontent.com/33494009/52457567-9f7abb00-2b41-11e9-9528-e00445e60d08.png)
-![screenshot_2019-01-19-01-24-45](https://user-images.githubusercontent.com/33494009/52457568-9f7abb00-2b41-11e9-8ec5-9eb2a3c66342.png)
+
+
+## Relacionamento das telas
