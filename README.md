@@ -69,10 +69,11 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 - Um livro pode adicionar um ou mais capítulos, e um capítulo pertence a um único livro.
 - Capítulos podem ser marcados e favoritados.
 
+Obs: Foi criada uma classe Teste.java para melhor entendimento do modelo e suas funções através de pequenos testes.
+
 **Diagrama**
 	
-
-![diagrama de classe readerdiary 2](https://user-images.githubusercontent.com/33494009/52458260-8ffd7100-2b45-11e9-974a-a9a2cf6d9e74.jpeg)
+![diagrama de classe readerdiary 1](https://user-images.githubusercontent.com/33494009/52619426-bba39280-2e88-11e9-9c11-6c78ef4a74ee.png)
 
 
 
@@ -110,3 +111,5 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 ![cadastrocapitulo](https://user-images.githubusercontent.com/33494009/52618564-58b0fc00-2e86-11e9-929b-4fbcba50da70.png)
 
 ## Relacionamento das telas
+![relacionamento de telas readerdiary](https://user-images.githubusercontent.com/33494009/52619309-7ed79b80-2e88-11e9-98fc-ee9e5fa88ad4.jpeg)
+
