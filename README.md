@@ -78,6 +78,29 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 
 ## StoryBoard
 
+- Tela de Login onde o usuário entrara na aplicação e tela de cadastro para caso o usuário não possua uma conta
+
+![login](https://user-images.githubusercontent.com/33494009/52617797-1d153280-2e84-11e9-9c7b-52b945f90efd.png)
+![cadastro](https://user-images.githubusercontent.com/33494009/52617796-1d153280-2e84-11e9-80ff-7eb74c98557e.png)
+
+
+- Tela de navegação onde será possível filtrar os livros entre os que estão em estado de lido, lendo e os que se deseja ler, e também realizar o logout e por música de fundo.
+
+
+
+- Tela que mostra seus livros atuais juntamente com seu progresso,ícone dinâmico que muda dependendo de um gênero específico tais como Ação, Drama, Terror,Romance e etc.No primeiro botão pode-se editar o livro mudar todas as suas informações e atualizar seu progresso, e no segundo terá a opção de remover o livro,e no botão mais abaixo adiciona livros:
+
+
+
+- Tela de cadastro de livro onde será inserido os dados do livro e o status dinâmico, onde só serão inseridos data de início de leitura caso o livro esteja em estado de lendo, assim como a página atual. As informações que dependem do status do livro só aparecerão quando o mesmo for selecionado:
+
+
+
+- Tela das informações do livro e seus respectivos capítulos e comentários
+
+
+- Tela de cadastro de capítulos
+
 
 
 ## Relacionamento das telas
