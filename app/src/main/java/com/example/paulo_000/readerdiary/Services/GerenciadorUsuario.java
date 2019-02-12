@@ -57,11 +57,6 @@ public class GerenciadorUsuario {
     }
 
 
-    public void addLivroDeInteresse(String titulo,String autor,String genero,String ano,String status,String quantidadeDePg){
-        usuario.getLivros().add(new Livro(titulo,autor,genero,ano,"Desejo Ler",quantidadeDePg));
-
-    }
-
     public Usuario obtemUsuario(List<Usuario> usuarios){
         for(int i = 0; i < usuarios.size(); i++){
             if(usuarios.get(i).getEmail().equals(this.usuario.getEmail())){

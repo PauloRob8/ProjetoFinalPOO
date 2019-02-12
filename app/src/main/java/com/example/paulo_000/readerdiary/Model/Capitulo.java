@@ -12,8 +12,8 @@ public class Capitulo {
     private int capNum;
     private String descricao;
     private ToOne<Livro> livro;
-    private boolean favorito;
-    private boolean marcado; //Marca o capitulo em que o leitor está
+    private boolean favorito = false;
+    private boolean marcado = false; //Marca o capitulo em que o leitor está
 
 
     public boolean isMarcado() {

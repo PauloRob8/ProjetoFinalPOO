@@ -12,8 +12,8 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int objectbox_notification = 0x7f070081;
-        public static final int objectbox_stop = 0x7f070082;
+        public static final int objectbox_notification = 0x7f070082;
+        public static final int objectbox_stop = 0x7f070083;
     }
     public static final class string {
         private string() {}

@@ -6,6 +6,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.paulo_000.readerdiary.Model.Capitulo;
 import com.example.paulo_000.readerdiary.Model.Comentario;
 import com.example.paulo_000.readerdiary.Model.Livro;
 import com.example.paulo_000.readerdiary.Model.Usuario;
@@ -14,13 +15,21 @@ import com.example.paulo_000.readerdiary.R;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class GerenciadorLivro {
 
     private Livro livro;
+    private Usuario usuario;
 
     public GerenciadorLivro(Livro livro){
         this.livro = livro;
+    }
+
+    public GerenciadorLivro(Usuario usuario,Livro livro){
+        this.livro = livro;
+        this.usuario = usuario;
+
     }
 
     public void carregaLivro(EditText titulo, EditText autor, TextView genero, EditText ano, TextView status, EditText qtdPg, EditText pgAtua, TextView data1, TextView data2){
@@ -81,15 +90,30 @@ public class GerenciadorLivro {
         }
     }
 
-    public String getDateTime(){
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        return dateFormat.format(date);
+   public Capitulo obtemCapitulo(String titulo){
+        for(int i = 0 ; i < livro.getCapitulos().size(); i++)
+            if(livro.getCapitulos().get(i).getTitulo().equals(titulo))
+                return livro.getCapitulos().get(i);
+
+        return null;
+   }
+
+   public Comentario obtemComentario(String comentario) {
+       for (int i = 0; i < livro.getComentarios().size(); i++)
+           if(livro.getComentarios().get(i).getDescricao().equals(comentario))
+               return livro.getComentarios().get(i);
+
+       return null;
+   }
+
+
+    public Livro obtemLivro(String titulo){
+        for(int i =0 ; i < usuario.getLivros().size(); i++){
+            if(usuario.getLivros().get(i).getTitulo().equals(titulo))
+                return usuario.getLivros().get(i);
+        }
+        return null;
     }
 
-    public void comentar(String comentario){
-        Comentario comentario1 = new Comentario(comentario,getDateTime());
-        this.livro.getComentarios().add(comentario1);
-    }
 
 }

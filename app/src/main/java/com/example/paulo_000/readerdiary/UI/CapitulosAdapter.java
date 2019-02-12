@@ -47,15 +47,16 @@ public class CapitulosAdapter extends RecyclerView.Adapter<CapitulosAdapter.Capi
         holder.capComentario.setText(capitulo.getDescricao());
         holder.capNum.setText(""+capitulo.getCapNum());
 
-        if(capitulo.favoritarCap())
+        if(capitulo.isFavorito())
             holder.favorito.setVisibility(View.VISIBLE);
         else
             holder.favorito.setVisibility(View.INVISIBLE);
 
-        if(capitulo.marcarCapitulo())
+        if(capitulo.isMarcado())
             holder.marcado.setVisibility(View.VISIBLE);
         else
             holder.marcado.setVisibility(View.INVISIBLE);
+
 
 
         holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {

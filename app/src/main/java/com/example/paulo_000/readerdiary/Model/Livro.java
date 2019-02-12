@@ -1,6 +1,9 @@
 package com.example.paulo_000.readerdiary.Model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import io.objectbox.annotation.Entity;
@@ -155,20 +158,6 @@ public class Livro {
         this.capitulos = capitulos;
     }
 
-    public void salvaLivro(String nome, String autor, String genero, String ano, String status, String numeroDePg, String dataInicial, String pgAtual, String dataFinal){
-        this.setTitulo(nome);
-        this.setAno(ano);
-        this.setGenero(genero);
-        this.setAutor(autor);
-        this.setStatus(status);
-        this.setQtdPg(numeroDePg);
-        this.setDataInicial(dataInicial);
-        this.setPgAtual(pgAtual);
-        this.setDataFinal(dataFinal);
-        this.validaPag(numeroDePg,pgAtual);
-
-    }
-
 
    public void addCapitulo(Capitulo capitulo){
         this.capitulos.add(capitulo);
@@ -185,16 +174,13 @@ public class Livro {
 
    }
 
-   public void addComentario(Comentario comentario){
-        this.comentarios.add(comentario);
-   }
+    public void comentar(String comentario){
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        Comentario comentario1 = new Comentario(comentario,dateFormat.format(date));
+        this.getComentarios().add(comentario1);
+    }
 
-
-   public void lerLivro(String paginaDaLeitura){
-        this.pgAtual = paginaDaLeitura;
-        if (this.pgAtual.equals(this.getQtdPg()))
-            this.setStatus("Lido");
-   }
 
     public void validaPag(String qtdPg,String pgAtual){
         if(!pgAtual.equals("") & !qtdPg.equals("")) {

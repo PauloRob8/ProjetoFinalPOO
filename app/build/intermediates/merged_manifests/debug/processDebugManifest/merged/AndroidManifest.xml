@@ -28,18 +28,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.paulo_000.readerdiary.UI.ListaLivrosActivity" />
+        <activity
+            android:name="com.example.paulo_000.readerdiary.UI.ListaLivrosActivity"
+            android:label="Seus Livros" />
         <activity
             android:name="com.example.paulo_000.readerdiary.UI.AddLivroActivity"
+            android:label="Novo Livro"
             android:parentActivityName="com.example.paulo_000.readerdiary.UI.ListaLivrosActivity" />
-        <activity android:name="com.example.paulo_000.readerdiary.UI.CadastroActivity" />
+        <activity
+            android:name="com.example.paulo_000.readerdiary.UI.CadastroActivity"
+            android:label="Cadastro" />
         <activity
             android:name="com.example.paulo_000.readerdiary.UI.CapitulosActivity"
+            android:label="Capitulos"
             android:parentActivityName="com.example.paulo_000.readerdiary.UI.ListaLivrosActivity" />
         <activity
             android:name="com.example.paulo_000.readerdiary.UI.AddCapituloActivity"
-            android:parentActivityName="com.example.paulo_000.readerdiary.UI.CapitulosActivity" >
-        </activity>
+            android:label="Novo Capitulo" />
     </application>
 
 </manifest>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [io.objectbox:objectbox-android:2.3.1] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.1.aar\d7ec6943235221ea194e214dd095f3a1\AndroidManifest.xml:2:1-25:12
 MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\e2175c025d4b020c9e112a1f773df3fa\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:27.1.0] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\6374d16f67673b2589a6c77870f637f4\AndroidManifest.xml:17:1-22:12
@@ -23,25 +23,25 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\paulo_000\.gradle\ca
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\f9407e1d2efb463f8374c646c4d17619\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\81a55f6371d00fb65b12fee37e96c110\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\c0416adc0d8ba3fcddc209209409a5da\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:5:5-38:19
 MERGED from [io.objectbox:objectbox-android:2.3.1] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.1.aar\d7ec6943235221ea194e214dd095f3a1\AndroidManifest.xml:21:5-23:31
 MERGED from [io.objectbox:objectbox-android:2.3.1] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.1.aar\d7ec6943235221ea194e214dd095f3a1\AndroidManifest.xml:21:5-23:31
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\paulo_000\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\8ae96333f899382bdec09540356d066c\AndroidManifest.xml:9:5-20
@@ -65,47 +65,55 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pa
 	android:name
 		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:6:9-41
 activity#com.example.paulo_000.readerdiary.UI.LoginActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:13:9-20:20
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:13:9-21:20
 	android:theme
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:14:13-60
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:15:13-60
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:13:19-51
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:14:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:19:27-74
 activity#com.example.paulo_000.readerdiary.UI.ListaLivrosActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:21:9-60
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:22:9-23:42
+	android:label
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:23:13-40
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:21:19-57
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:22:19-57
 activity#com.example.paulo_000.readerdiary.UI.AddLivroActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:22:9-24:68
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:24:9-27:68
 	android:parentActivityName
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:24:13-65
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:27:13-65
+	android:label
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:26:13-39
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:23:13-48
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:25:13-48
 activity#com.example.paulo_000.readerdiary.UI.CadastroActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:25:9-57
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:28:9-29:39
+	android:label
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:25:19-54
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:28:19-54
 activity#com.example.paulo_000.readerdiary.UI.CapitulosActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:26:9-28:68
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:30:9-33:68
 	android:parentActivityName
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:28:13-65
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:33:13-65
+	android:label
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:32:13-38
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:27:13-49
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:31:13-49
 activity#com.example.paulo_000.readerdiary.UI.AddCapituloActivity
-ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:29:9-31:20
-	android:parentActivityName
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:30:13-63
+ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:34:9-37:25
+	android:label
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:36:13-42
 	android:name
-		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:29:19-57
+		ADDED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml:35:13-51
 uses-sdk
 INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\paulo_000\Documents\Android Projects\ReaderDiary4.0\app\src\main\AndroidManifest.xml

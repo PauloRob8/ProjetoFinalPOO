@@ -29,7 +29,6 @@ public final class UsuarioCursor extends Cursor<Usuario> {
     private final static int __ID_nome = Usuario_.nome.id;
     private final static int __ID_email = Usuario_.email.id;
     private final static int __ID_senha = Usuario_.senha.id;
-    private final static int __ID_cadastrado = Usuario_.cadastrado.id;
 
     public UsuarioCursor(io.objectbox.Transaction tx, long cursor, BoxStore boxStore) {
         super(tx, cursor, Usuario_.__INSTANCE, boxStore);
@@ -57,7 +56,7 @@ public final class UsuarioCursor extends Cursor<Usuario> {
         long __assignedId = collect313311(cursor, entity.getId(), PUT_FLAG_FIRST | PUT_FLAG_COMPLETE,
                 __id1, nome, __id2, email,
                 __id3, senha, 0, null,
-                __ID_cadastrado, entity.isCadastrado() ? 1 : 0, 0, 0,
+                0, 0, 0, 0,
                 0, 0, 0, 0,
                 0, 0, 0, 0,
                 0, 0, 0, 0);

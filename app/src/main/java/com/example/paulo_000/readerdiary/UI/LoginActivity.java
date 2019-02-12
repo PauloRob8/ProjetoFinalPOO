@@ -60,7 +60,6 @@ public class LoginActivity extends AppCompatActivity {
 
         List<Usuario> usuarios = usuarioBox.getAll();
 
-        Toast.makeText(this,"" + usuarios.size(),Toast.LENGTH_LONG).show();
 
         if (gerenciadorUsuario.logarUsuario(usuarios,email,senha) == 1) {
             Toast.makeText(this, "Bem Vindo ao ReaderDiary", Toast.LENGTH_LONG).show();

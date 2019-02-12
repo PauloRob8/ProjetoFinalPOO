@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.LoginActivity"
+        <activity
+            android:name=".UI.LoginActivity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,17 +19,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.ListaLivrosActivity" />
+        <activity android:name=".UI.ListaLivrosActivity"
+            android:label="Seus Livros"/>
         <activity
             android:name=".UI.AddLivroActivity"
+            android:label="Novo Livro"
             android:parentActivityName=".UI.ListaLivrosActivity" />
-        <activity android:name=".UI.CadastroActivity" />
+        <activity android:name=".UI.CadastroActivity"
+            android:label="Cadastro"/>
         <activity
             android:name=".UI.CapitulosActivity"
+            android:label="Capitulos"
             android:parentActivityName=".UI.ListaLivrosActivity" />
-        <activity android:name=".UI.AddCapituloActivity"
-            android:parentActivityName=".UI.CapitulosActivity">
-        </activity>
+        <activity
+            android:name=".UI.AddCapituloActivity"
+            android:label="Novo Capitulo"
+            ></activity>
     </application>
 
 </manifest>

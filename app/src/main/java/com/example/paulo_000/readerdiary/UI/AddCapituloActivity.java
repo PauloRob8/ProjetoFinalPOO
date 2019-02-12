@@ -15,6 +15,7 @@ import com.example.paulo_000.readerdiary.Model.Capitulo;
 import com.example.paulo_000.readerdiary.Model.Livro;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
+import com.example.paulo_000.readerdiary.Services.Fonte;
 
 import io.objectbox.Box;
 
@@ -68,7 +69,7 @@ public class AddCapituloActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         
-        startActivity(new Intent(this,CapitulosActivity.class));
+       finish();
     }
 
     public Livro obtemLivro() {
@@ -82,9 +83,15 @@ public class AddCapituloActivity extends AppCompatActivity {
 
     public void carregaCapitulo(Capitulo capitulos){
 
+        Fonte fonte = new Fonte(this);
+
         editNum.setText(capitulos.getTitulo());
         editTitulo.setText(capitulos.getTitulo());
         editComentario.setText(capitulos.getDescricao());
+
+        fonte.setarFonte(editNum);
+        fonte.setarFonte(editTitulo);
+        fonte.setarFonte(editComentario);
 
     }
 
@@ -107,9 +114,23 @@ public class AddCapituloActivity extends AppCompatActivity {
 
     public void marcarCapitulo(View view) {
         capitulo.marcarCapitulo();
+        if(capitulo.isMarcado())
+            Toast.makeText(this,"Capitulo marcado",Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this,"Capitulo desmarcado",Toast.LENGTH_LONG).show();
+
+
     }
 
     public void favoritarCapitulo(View view) {
         capitulo.favoritarCap();
+        if(capitulo.isFavorito())
+            Toast.makeText(this,"Capitulo favoritado",Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this,"Capitulo desfavoritado",Toast.LENGTH_LONG).show();
+    }
+
+    public void cancelar(View view) {
+        this.finish();
     }
 }

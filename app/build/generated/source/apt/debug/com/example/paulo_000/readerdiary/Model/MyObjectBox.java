@@ -92,8 +92,6 @@ public class MyObjectBox {
         entityBuilder.property("nome", PropertyType.String).id(4, 130613739176843992L);
         entityBuilder.property("email", PropertyType.String).id(2, 3056685035194919210L);
         entityBuilder.property("senha", PropertyType.String).id(3, 2051174953741558612L);
-        entityBuilder.property("cadastrado", PropertyType.Bool).id(5, 2185795398643759479L)
-            .flags(PropertyFlags.NOT_NULL);
 
         entityBuilder.relation("livros", 3, 7588642949291179894L, 3, 5028548162492047711L);
         entityBuilder.entityDone();

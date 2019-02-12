@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.paulo_000.readerdiary.Model.Usuario;
 import com.example.paulo_000.readerdiary.Persistencia.App;
 import com.example.paulo_000.readerdiary.R;
+import com.example.paulo_000.readerdiary.Services.Fonte;
 import com.example.paulo_000.readerdiary.Services.GerenciadorUsuario;
 
 
@@ -35,9 +36,16 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     public void setupViews(){
+
+        Fonte fonte = new Fonte(this);
+
         cadastroEmail = findViewById(R.id.cd_email);
         cadastroSenha = findViewById(R.id.cd_senha);
         nomeDoUsuario = findViewById(R.id.cd_nome);
+
+        fonte.setarFonte(cadastroEmail);
+        fonte.setarFonte(cadastroSenha);
+        fonte.setarFonte(nomeDoUsuario);
     }
 
     public void cadastrar(View view) {

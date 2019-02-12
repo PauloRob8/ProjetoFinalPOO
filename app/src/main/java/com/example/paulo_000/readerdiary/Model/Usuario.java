@@ -20,15 +20,6 @@ public class Usuario {
     private String email;
     private String senha;
     private List<Livro> livros = new ArrayList<Livro>();
-    private boolean cadastrado;
-
-    public boolean isCadastrado() {
-        return cadastrado;
-    }
-
-    public void setCadastrado(boolean cadastrado) {
-        this.cadastrado = cadastrado;
-    }
 
     public List<Livro> getLivros() {
         return livros;
@@ -149,16 +140,4 @@ public class Usuario {
     }
 
 
-   // public int logaUsuario(List<Usuario> usuarios){
-     //   for(int i = 0; i < usuarios.size(); i++){
-
-
-    public List<Usuario> logaUsuario(Box<Usuario> usuarioBox,String email,String senha){
-        List<Usuario> result = usuarioBox.query()
-                .equal(Usuario_.email,email)
-                .equal(Usuario_.senha,senha)
-                .build().find();
-        return result;
-
-    }
 }

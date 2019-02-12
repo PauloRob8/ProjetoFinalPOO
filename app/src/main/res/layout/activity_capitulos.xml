@@ -144,6 +144,7 @@
                 android:layout_gravity="center"
                 android:numStars="5"
                 android:stepSize="1.0"
+                android:isIndicator="true"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

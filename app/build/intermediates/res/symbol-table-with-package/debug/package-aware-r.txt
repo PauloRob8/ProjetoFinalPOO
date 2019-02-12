@@ -778,6 +778,7 @@ drawable abc_vector_test
 drawable abook
 drawable adbook
 drawable addbook
+drawable app_header
 drawable avd_hide_password
 drawable avd_show_password
 drawable book
@@ -816,10 +817,8 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable objectbox_notification
 drawable objectbox_stop
-drawable old_book
 drawable paper_background
 drawable paper_bg
-drawable read
 drawable read1
 drawable remover
 drawable remover2
@@ -1136,6 +1135,7 @@ layout activity_add_capitulo
 layout activity_add_livro
 layout activity_cadastro
 layout activity_capitulos
+layout activity_comentarios
 layout activity_lista_livros
 layout activity_login
 layout design_bottom_navigation_item

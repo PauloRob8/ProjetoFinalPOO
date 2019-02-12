@@ -50,16 +50,12 @@ public final class Usuario_ implements EntityInfo<Usuario> {
     public final static io.objectbox.Property<Usuario> senha =
         new io.objectbox.Property<>(__INSTANCE, 3, 3, String.class, "senha");
 
-    public final static io.objectbox.Property<Usuario> cadastrado =
-        new io.objectbox.Property<>(__INSTANCE, 4, 5, boolean.class, "cadastrado");
-
     @SuppressWarnings("unchecked")
     public final static io.objectbox.Property<Usuario>[] __ALL_PROPERTIES = new io.objectbox.Property[]{
         id,
         nome,
         email,
-        senha,
-        cadastrado
+        senha
     };
 
     public final static io.objectbox.Property<Usuario> __ID_PROPERTY = id;

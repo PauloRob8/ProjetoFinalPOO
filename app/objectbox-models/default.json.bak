@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:8027927662726741047",
-      "lastPropertyId": "4:130613739176843992",
+      "lastPropertyId": "5:2185795398643759479",
       "name": "Usuario",
       "properties": [
         {
@@ -23,9 +23,18 @@
         {
           "id": "4:130613739176843992",
           "name": "nome"
+        },
+        {
+          "id": "5:2185795398643759479",
+          "name": "cadastrado"
         }
       ],
-      "relations": []
+      "relations": [
+        {
+          "id": "3:7588642949291179894",
+          "name": "livros"
+        }
+      ]
     },
     {
       "id": "3:5028548162492047711",
@@ -86,12 +95,16 @@
         {
           "id": "1:7162257758094962566",
           "name": "comentarios"
+        },
+        {
+          "id": "2:5347952363181811534",
+          "name": "capitulos"
         }
       ]
     },
     {
       "id": "5:6015835108166209202",
-      "lastPropertyId": "5:991785612102248241",
+      "lastPropertyId": "7:1961414162586964276",
       "name": "Capitulo",
       "properties": [
         {
@@ -114,6 +127,14 @@
           "id": "5:991785612102248241",
           "indexId": "5:3533949268481199532",
           "name": "livroId"
+        },
+        {
+          "id": "6:4896779522814663939",
+          "name": "favorito"
+        },
+        {
+          "id": "7:1961414162586964276",
+          "name": "marcado"
         }
       ],
       "relations": []
@@ -141,7 +162,7 @@
   ],
   "lastEntityId": "6:2010935336677621588",
   "lastIndexId": "5:3533949268481199532",
-  "lastRelationId": "1:7162257758094962566",
+  "lastRelationId": "3:7588642949291179894",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
