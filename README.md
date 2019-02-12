@@ -92,6 +92,8 @@ Obs: Foi criada uma classe Teste.java para melhor entendimento do modelo e suas 
 
 - Tela que mostra seus livros atuais juntamente com seu progresso,ícone dinâmico que muda dependendo de um gênero específico tais como Ação, Drama, Terror,Romance e etc.No primeiro botão pode-se editar o livro mudar todas as suas informações e atualizar seu progresso, e no segundo terá a opção de remover o livro,e no botão mais abaixo adiciona livros:
 
+![lista](https://user-images.githubusercontent.com/33494009/52622408-ee518900-2e90-11e9-80ad-7d70106fa603.png)
+
 
 - Tela de cadastro de livro onde será inserido os dados do livro e o status dinâmico, onde só serão inseridos data de início de leitura caso o livro esteja em estado de lendo, assim como a página atual. As informações que dependem do status do livro só aparecerão quando o mesmo for selecionado:
 
