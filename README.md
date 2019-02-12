@@ -86,21 +86,27 @@ Acima foi criado uma instância da box específica para usuários, ou seja, uma 
 
 - Tela de navegação onde será possível filtrar os livros entre os que estão em estado de lido, lendo e os que se deseja ler, e também realizar o logout e por música de fundo.
 
+![drawer](https://user-images.githubusercontent.com/33494009/52618563-58b0fc00-2e86-11e9-86ad-1183be805602.png)
 
 
 - Tela que mostra seus livros atuais juntamente com seu progresso,ícone dinâmico que muda dependendo de um gênero específico tais como Ação, Drama, Terror,Romance e etc.No primeiro botão pode-se editar o livro mudar todas as suas informações e atualizar seu progresso, e no segundo terá a opção de remover o livro,e no botão mais abaixo adiciona livros:
 
 
-
 - Tela de cadastro de livro onde será inserido os dados do livro e o status dinâmico, onde só serão inseridos data de início de leitura caso o livro esteja em estado de lendo, assim como a página atual. As informações que dependem do status do livro só aparecerão quando o mesmo for selecionado:
 
+![cadastrolivro](https://user-images.githubusercontent.com/33494009/52618901-471c2400-2e87-11e9-912f-cfc329956657.png)
 
 
 - Tela das informações do livro e seus respectivos capítulos e comentários
 
 
+![capitulos1](https://user-images.githubusercontent.com/33494009/52618566-59499280-2e86-11e9-8b6e-58f47ab6219a.png)
+![capitulo](https://user-images.githubusercontent.com/33494009/52618902-471c2400-2e87-11e9-9149-b09a34dd9120.png)
+
+
+
 - Tela de cadastro de capítulos
 
-
+![cadastrocapitulo](https://user-images.githubusercontent.com/33494009/52618564-58b0fc00-2e86-11e9-929b-4fbcba50da70.png)
 
 ## Relacionamento das telas
