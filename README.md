@@ -45,6 +45,7 @@ Versão mínima do SDK: 22;
 
 	id;
 	numero do capitulo;
+	descrição(ou resumo do capitulo);
 	titulo;
 	
 * Comentário
@@ -54,10 +55,10 @@ Versão mínima do SDK: 22;
 	
 A persitência dos dados será realizada através do banco de dados orientado a objetos e NoSql [ObjectBox](https://objectbox.io/), na aplicação serão criadas Caixas (instâncias do ObjectBox) para armazenar os dados ex:
 
-	```
+	
 	public Box<Usuario> usuarioBox;
 	usuarioBox = ((App) getApplication()).getBoxStore().boxFor(Usuario.class);
-	```
+
 
 Acima foi criado uma instância da box específica para usuários, ou seja, uma caixa de usuários que será usada para armazenar os dados dos mesmos assim criando o esquema multiusário.
 
